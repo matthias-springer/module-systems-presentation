@@ -215,6 +215,46 @@
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Nested Classes in Newspeak}
+\includegraphics[width=\textwidth]{newspeak_basic.pdf}
+\end{frame}
+
+\begin{explainframe}{Nested Classes in Newspeak}
+\begin{itemize}
+  \item \textbf{Methods:} instance methods
+  \item \textbf{Classes:} nested class definitions
+  \item \textbf{Slots:} instance variables
+\end{itemize}
+\end{explainframe}
+
+\begin{frame}[fragile]{Instance Creation in Newspeak}{Nested Classes in a Nutshell for Smalltalkers}
+\begin{enumerate}
+  \item Message send to class object: invoke factory method \\ (e.g. \texttt{usingPlatform:} or \texttt{new})
+  \item Execute factory method: might initialize some slots
+  \item Generate class objects for nested classes (s.t. optimizations)
+\end{enumerate}
+
+\begin{lstlisting}
+Object subclass: #CombinatorialParsing
+    instanceVariableNames: 'CombinatorialParser SequentialParser ... OrderedCollection LinkedList'.
+
+CombinatorialParsing class>>usingPlatform: platform
+  | inst |
+  inst OrderedCollection: platform collections OrderedCollection.
+  inst LinkedList: platform collections LinkedList.
+  inst CombinatorialParser: Object subclass: ...
+  inst CombinatorialParser compile: 'and: parser ^ parent OrderedCollection with: self with: parser'.
+  ...
+  ^ inst 
+\end{lstlisting}
+(getters and setters exist for all instance variables)
+\end{frame}
+
+\begin{frame}{Class Hierarchy Inheritance in Newspeak}
+\centering
+\includegraphics[width=0.8\textwidth]{newspeak_inheritance.pdf}
+\end{frame}
+
 \section{BETA}
 \begin{frame}{BETA}
 \begin{itemize}
@@ -222,6 +262,24 @@
   \item Statically typed
 \end{itemize}
 \end{frame}
+
+\begin{frame}{Unification of Abstraction Mechanisms: The Pattern}
+\begin{itemize}
+\item Instances of a procedure are procedure activations
+\item Instances of a class are objects
+\item Instances of a function are function activations
+\item Instances of a type are values
+\end{itemize}
+\vfill
+(see Madsen, O. L.: Abstraction and Modularization in the BETA Programming Language)
+\end{frame}
+
+\begin{explainframe}{Similarities between Objects and Procedure Activations}
+\begin{itemize}
+  \item Procedure activation = Activation record + execution of code
+  \item Activation record is similar to object: data items and local procedures (nested procedures in languages with block structure)
+\end{itemize}
+\end{explainframe}
 
 \begin{frame}[fragile]{Example}
 \begin{verbatim}
@@ -336,6 +394,15 @@ ThreeDPoint: Point
     \item \textbf{Function Pattern}: sequence of actions with return value(s), does not change state
     \item \textbf{Class Pattern}: template for generating objects
   \end{itemize}
+\end{frame}
+
+\begin{frame}{Summary}
+\begin{itemize}
+  \item Pattern = Method = Class
+  \item Nested patterns: work like virtual methods in other programming languages
+  \item More than Java nested classes: Java nested classes are not virtual
+  \item Workaround for nested classes in other programming languages: factory
+\end{itemize}
 \end{frame}
 
 \end{document}
