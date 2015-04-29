@@ -215,7 +215,89 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Nested Classes in Newspeak}
+\begin{frame}{Concepts}
+
+\end{frame}
+
+\section{Unification: The Pattern}
+
+\begin{frame}{Unification of Abstraction Mechanisms: The Pattern}
+\begin{itemize}
+\item Instances of a procedure are procedure activations
+\item Instances of a class are objects
+\item Instances of a function are function activations
+\item Instances of a type are values
+\end{itemize}
+\vfill
+(see Madsen, O. L.: Abstraction and Modularization in the BETA Programming Language)
+\end{frame}
+
+\begin{explainframe}{Similarities between Objects and Procedure Activations}
+\begin{itemize}
+  \item Procedure activation = Activation record + execution of code
+  \item Activation record is similar to object: data items and local procedures (nested procedures in languages with block structure)
+\end{itemize}
+\end{explainframe}
+
+\begin{frame}[fragile]{Example}
+\begin{lstlisting}
+(# Account:
+    (#  balance: @integer;
+        Deposit:
+          (# amount: @integer
+             enter amount
+             do balance+amount->balance
+             exit balance
+          #);
+        Withdraw: (# ... #);
+    #);
+   account1, account2, account3: @Account;
+   K1,K2: @integer;
+   do 
+     100->&account1.Deposit;
+     150->&account1.Deposit->K1;
+     90->&account3.Withdraw->K2;
+#)
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Patterns}
+\begin{itemize}
+  \item Classes and methods are patterns
+  \item ``Patterns [are] templates for generating objects (instances).''
+  \item Objects are executable
+\end{itemize}
+\vfill
+\begin{verbatim}
+P: (# 
+  Decl1; Decl2; ...; Decln
+  enter In
+  do Imp
+  exit Out
+#)
+\end{verbatim}
+\end{frame}
+
+\begin{frame}{Subpatterns}{Specialization by Simple Inheritance}
+\begin{itemize}
+  \item Resulting properties = inherited properties + new properties
+  \item Resulting behavior = inherited behavivor + new behavior
+  \item Resulting arguments = inherited arguments + new arguments
+  \item Resulting results = inherited results + new results
+  \item Method execution starts at base method: use \texttt{inner} to call specialized method
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Pattern Concepts}
+  \begin{itemize}
+    \item \textbf{Procedure Pattern}: sequence of actions
+    \item \textbf{Function Pattern}: sequence of actions with return value(s), does not change state
+    \item \textbf{Class Pattern}: template for generating objects
+  \end{itemize}
+\end{frame}
+
+\section{Nested Classes}
+\begin{frame}{Example: Nested Classes in Newspeak \textsuperscript{[2]}}
 \includegraphics[width=\textwidth]{newspeak_basic.pdf}
 \end{frame}
 
@@ -235,11 +317,16 @@
 \end{itemize}
 \end{frame}
 
-\begin{explainframe}{Nested Classes in Newspeak}
+\begin{explainframe}{Nested Classes in Newspeak \textsuperscript{[3]}}
 \begin{itemize}
   \item \textbf{Methods:} instance methods
   \item \textbf{Classes:} nested class definitions
   \item \textbf{Slots:} instance variables
+  \item \textbf{Module Definition:} a class object that acts as a module
+  \begin{itemize}
+    \item TODO
+  \end{itemize}
+  \item \textbf{Module:} an instance of a module definition
 \end{itemize}
 \end{explainframe}
 
@@ -269,7 +356,7 @@ CombinatorialParsing>>StarParser
 \end{lstlisting}
 \end{frame}
 
-\begin{frame}{Class Hierarchy Inheritance in Newspeak}
+\begin{frame}{Example: Class Hierarchy Inheritance in Newspeak \textsuperscript{[1]}}
 \centering
 \includegraphics[width=0.8\textwidth]{newspeak_inheritance.pdf}
 \end{frame}
@@ -301,78 +388,26 @@ ExtendedShapes>>ColorShapeLibrary
 \end{lstlisting}
 \end{explainframe}
 
+\begin{explainframe}{Why Nested Classes are lazily initialized}
+\begin{itemize}
+  \item Consider nested classes are initialized in factory.
+  \item \lstinline{ExtendedShape>>ColorShapeLibrary class>>usingPlatform:} triggers \lstinline{ShapeLibrary class>>usingPlatform:} (super constructor call).
+  \item \lstinline{ShapeLibrary class>>usingPlatform:} creates \lstinline{Shape}, \lstinline{Circle}, \lstinline{Rectangle}.
+  \item \lstinline{ExtendedShape>>ColorShapeLibrary class>>usingPlatform:} creates (overrides) a new \lstinline{Shape} class.
+  \item \textbf{Problem:} \lstinline{Circle} and \lstinline{Rectangle} are still subclasses of the \emph{old} \lstinline{Shape} class.
+  \item \textbf{Solution:} all names are late bound and method calls. The method call \lstinline{Shape} creates the class on demand the superclass factory runs the subclass implementation (overridden).
+\end{itemize}
+\end{explainframe}
+
+\begin{frame}{Method Lookup in Newspeak \textsuperscript{[1]}}
+
+\end{frame}
+
 \section{BETA}
 \begin{frame}{BETA}
 \begin{itemize}
   \item Object-oriented, imperative programming language
   \item Statically typed
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Unification of Abstraction Mechanisms: The Pattern}
-\begin{itemize}
-\item Instances of a procedure are procedure activations
-\item Instances of a class are objects
-\item Instances of a function are function activations
-\item Instances of a type are values
-\end{itemize}
-\vfill
-(see Madsen, O. L.: Abstraction and Modularization in the BETA Programming Language)
-\end{frame}
-
-\begin{explainframe}{Similarities between Objects and Procedure Activations}
-\begin{itemize}
-  \item Procedure activation = Activation record + execution of code
-  \item Activation record is similar to object: data items and local procedures (nested procedures in languages with block structure)
-\end{itemize}
-\end{explainframe}
-
-\begin{frame}[fragile]{Example}
-\begin{verbatim}
-(# Account:
-    (#  balance: @integer;
-        Deposit:
-          (# amount: @integer
-             enter amount
-             do balance+amount->balance
-             exit balance
-          #);
-        Withdraw: (# ... #);
-    #);
-   account1, account2, account3: @Account;
-   K1,K2: @integer;
-   do 
-     100->&account1.Deposit;
-     150->&account1.Deposit->K1;
-     90->&account3.Withdraw->K2;
-#)
-\end{verbatim}
-\end{frame}
-
-\begin{frame}[fragile]{Patterns}
-\begin{itemize}
-  \item Classes and methods are patterns
-  \item ``Patterns [are] templates for generating objects (instances).''
-  \item Objects are executable
-\end{itemize}
-\vfill
-\begin{verbatim}
-P: (# 
-  Decl1; Decl2; ...; Decln
-  enter In
-  do Imp
-  exit Out
-#)
-\end{verbatim}
-\end{frame}
-
-\begin{frame}{Subpatterns}{Specialization by Simple Inheritance}
-\begin{itemize}
-  \item Resulting properties = inherited properties + new properties
-  \item Resulting behavior = inherited behavivor + new behavior
-  \item Resulting arguments = inherited arguments + new arguments
-  \item Resulting results = inherited results + new results
-  \item Method execution starts at base method: use \texttt{inner} to call specialized method
 \end{itemize}
 \end{frame}
 
@@ -434,14 +469,6 @@ ThreeDPoint: Point
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Pattern Concepts}
-  \begin{itemize}
-    \item \textbf{Procedure Pattern}: sequence of actions
-    \item \textbf{Function Pattern}: sequence of actions with return value(s), does not change state
-    \item \textbf{Class Pattern}: template for generating objects
-  \end{itemize}
-\end{frame}
-
 \begin{frame}{Summary}
 \begin{itemize}
   \item Pattern = Method = Class
@@ -451,4 +478,11 @@ ThreeDPoint: Point
 \end{itemize}
 \end{frame}
 
+\begin{frame}{References}
+\begin{itemize}
+  \item [1] Gilad Bracha, Peter Ahe, Vassili Bykov, Yaron Kashai, William Maddox and Eliot Miranda. Modules as Objects in Newspeak.
+  \item [2] Gilad Bracha, Peter Ahe and Vassili Bykov. Newspeak on Squeak: A Guide for the Perplexed.
+  \item [3] Gilad Bracha, Peter Ahe, Vassili Bykov, Yaron Kashai and Eliot Miranda. The Newspeak Programming Platform. 
+\end{itemize}
+\end{frame}
 \end{document}
