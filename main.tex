@@ -400,7 +400,51 @@ ExtendedShapes>>ColorShapeLibrary
 \end{explainframe}
 
 \begin{frame}{Method Lookup in Newspeak \textsuperscript{[1]}}
+\centering
+\includegraphics[width=0.5\textwidth]{newspeak_lookup.pdf}
+\end{frame}
 
+\begin{explainframe}{Method Lookup in Newspeak}
+\begin{itemize}
+  \item First enclosing classes (\emph{lexical chain})
+  \item Then superclass hierarchy
+  \item Never check superclass hierarchy of enclosing classes
+  \item Different from BETA and Java: \emph{comb semantics}
+  \begin{itemize}
+    \item Check receiver class and superclass hierarchy
+    \item Check enclosing classes and superclass hierarchies
+  \end{itemize}
+\end{itemize}
+\end{explainframe}
+
+\begin{frame}[fragile]{BETA Nested Classes}{Nesting in a Statically Typed Language}
+\begin{lstlisting}
+pattern Reservation
+{
+  Date date;
+  virtual pattern Display
+  {
+    do
+    {
+      date.Display();
+      INNER();
+    }
+  }
+}
+
+pattern TrainReservation extends Reservation
+{
+  Seat seat;
+  virtual pattern Display
+  {
+    do
+    {
+      seat.Display();
+      INNER();
+    }
+  }
+}
+\end{lstlisting}
 \end{frame}
 
 \section{BETA}
