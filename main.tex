@@ -298,22 +298,22 @@ P: (#
 
 \section{Nested Classes}
 \begin{frame}{Example: Nested Classes in Newspeak \textsuperscript{[2]}}
-\includegraphics[width=\textwidth]{newspeak_basic.pdf}
+\includegraphics[width=\textwidth]{resources/newspeak_basic}
 \end{frame}
 
 \begin{frame}{Nested Classes}{Benefits}
 \begin{itemize}
   \item Namespace for classes
   \item Group together what belongs together
-  \item Supports more sophisticated features (e.g. class hierarchy inheritance)
+  \item Supports more sophisticated features (e.g. Class Hierarchy Inheritance)
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Nested Classes}{Programming Languages}
 \begin{itemize}
   \item Java: nested classes are non-virtual
-  \item \textbf{BETA, Newspeak:} nested classes are virtual and can be overridden
   \item Ruby: inner classes/modules are non-virtual
+  \item \textbf{BETA, Newspeak:} nested classes are virtual and can be overridden
 \end{itemize}
 \end{frame}
 
@@ -324,6 +324,10 @@ P: (#
   \item \textbf{Slots:} instance variables
   \item \textbf{Module Definition:} a class object that acts as a module
   \begin{itemize}
+    \item has to be a top level class
+    \item has its own namespace which is represented by a \lstinline{platform} object
+    \item is stateless
+    \item its external dependencies are listed at the top of the class
     \item TODO
   \end{itemize}
   \item \textbf{Module:} an instance of a module definition
@@ -358,7 +362,7 @@ CombinatorialParsing>>StarParser
 
 \begin{frame}{Example: Class Hierarchy Inheritance in Newspeak \textsuperscript{[1]}}
 \centering
-\includegraphics[width=0.8\textwidth]{newspeak_inheritance.pdf}
+\includegraphics[width=0.8\textwidth]{resources/newspeak_inheritance}
 \end{frame}
 
 \begin{explainframe}{Class Hierarchy Inheritance $\rightarrow$ Smalltalk}
@@ -394,14 +398,14 @@ ExtendedShapes>>ColorShapeLibrary
   \item \lstinline{ExtendedShape>>ColorShapeLibrary class>>usingPlatform:} triggers \lstinline{ShapeLibrary class>>usingPlatform:} (super constructor call).
   \item \lstinline{ShapeLibrary class>>usingPlatform:} creates \lstinline{Shape}, \lstinline{Circle}, \lstinline{Rectangle}.
   \item \lstinline{ExtendedShape>>ColorShapeLibrary class>>usingPlatform:} creates (overrides) a new \lstinline{Shape} class.
-  \item \textbf{Problem:} \lstinline{Circle} and \lstinline{Rectangle} are still subclasses of the \emph{old} \lstinline{Shape} class.
+  \item \textbf{Problem:} \lstinline{Circle} and \lstinline{Rectangle} are still subclasses of the old \lstinline{Shape} class.
   \item \textbf{Solution:} all names are late bound and method calls. The method call \lstinline{Shape} creates the class on demand the superclass factory runs the subclass implementation (overridden).
 \end{itemize}
 \end{explainframe}
 
 \begin{frame}{Method Lookup in Newspeak \textsuperscript{[1]}}
 \centering
-\includegraphics[width=0.5\textwidth]{newspeak_lookup.pdf}
+\includegraphics[width=0.5\textwidth]{resources/newspeak_lookup}
 \end{frame}
 
 \begin{explainframe}{Method Lookup in Newspeak}
@@ -416,6 +420,23 @@ ExtendedShapes>>ColorShapeLibrary
   \end{itemize}
 \end{itemize}
 \end{explainframe}
+
+\begin{frame}[fragile]{Newspeak avoids method name clashes by superclasses}{Example}
+\begin{lstlisting}
+class Super {
+  //int m(){ return 42; }
+}
+class Outer {
+  int m(){ return 91; }
+  class Inner extends Super {
+    int foo(){ return m(); }
+  }
+}
+\end{lstlisting}
+
+\lstinline{new Outer.Inner().foo()}?
+
+\end{frame}
 
 \begin{frame}[fragile]{BETA Nested Classes}
 \begin{itemize}
@@ -496,7 +517,7 @@ TrainReservation: Reservation (#
 \end{frame}
 
 \begin{frame}{Virtual Patterns}{Example (non-virtual)}
-\includegraphics[width=\textwidth]{beta_virtual.pdf}
+\includegraphics[width=\textwidth]{resources/beta_virtual}
 \vfill
 \begin{itemize}
   \item \texttt{TrainReservation.DisplayTrainReservation} should be called \texttt{TrainReservation.DisplayReservation}
@@ -519,7 +540,7 @@ ThreeDPoint: Point
 \end{verbatim}
 \end{frame}
 
-\begin{frame}[fragile]{Virutal Patterns}{Virtual Class Patterns}
+\begin{frame}[fragile]{Virtual Patterns}{Virtual Class Patterns}
 
 \end{frame}
 
