@@ -417,34 +417,59 @@ ExtendedShapes>>ColorShapeLibrary
 \end{itemize}
 \end{explainframe}
 
-\begin{frame}[fragile]{BETA Nested Classes}{Nesting in a Statically Typed Language}
-\begin{lstlisting}
-pattern Reservation
-{
-  Date date;
-  virtual pattern Display
-  {
-    do
-    {
-      date.Display();
-      INNER();
-    }
-  }
-}
+\begin{frame}[fragile]{BETA Nested Classes}
+\begin{itemize}
+  \item Virtual methods can be overridden in subclasses
+  \item Virtual classes can be overridden in subclasses
+  \item Virtual patterns can be overridden in subclasses
+\end{itemize}
+\end{frame}
 
-pattern TrainReservation extends Reservation
-{
-  Seat seat;
-  virtual pattern Display
-  {
-    do
-    {
-      seat.Display();
-      INNER();
-    }
-  }
-}
+\begin{frame}[fragile]{BETA Nested Classes}
+\begin{lstlisting}
+Reservation: (#
+  date: @Date;
+  DisplayReservation: (# do date.Display; INNER; #)
+  Display:< DisplayReservation
+#)
+
+TrainReservation: Reservation (#
+  seat: @Seat;
+  DisplayTrainReservation: DisplayReservation (# do seat.Display; INNER; #)
+  Display::< DisplayTrainReservation
+#)
 \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{BETA Nested Classes}
+\begin{lstlisting}
+Reservation: (#
+  date: @Date;
+  Display:< (# do date.Display; INNER; #)
+#)
+
+TrainReservation: Reservation (#
+  seat: @Seat;
+  Display::< (# do seat.Display; INNER; #)
+#)
+\end{lstlisting}
+\end{frame}
+
+\begin{explainframe}{BETA Nested Classes}
+\begin{itemize}
+  \item Only virtual patterns can be overridden (denoted by \lstinline{:<})
+  \item Overriding pattern must be a subpattern of superpattern
+  \item Pattern execution starts with base pattern (\lstinline{inner} instead of \lstinline{super})
+\end{itemize}
+\end{explainframe}
+
+\begin{frame}{Poor Man's Nested Classes\textsuperscript{[4]}}{Classes as First Class Objects}
+\begin{itemize}
+  \item Scoping rules are different
+  \item No convenient access to enclosing instance
+  \item Hierarchy not reflected in the source code
+  \item Bad tooling support
+\end{itemize}
 \end{frame}
 
 \section{BETA}
@@ -527,6 +552,8 @@ ThreeDPoint: Point
   \item [1] Gilad Bracha, Peter Ahe, Vassili Bykov, Yaron Kashai, William Maddox and Eliot Miranda. Modules as Objects in Newspeak.
   \item [2] Gilad Bracha, Peter Ahe and Vassili Bykov. Newspeak on Squeak: A Guide for the Perplexed.
   \item [3] Gilad Bracha, Peter Ahe, Vassili Bykov, Yaron Kashai and Eliot Miranda. The Newspeak Programming Platform. 
+  \item [4] \url{http://gbracha.blogspot.jp/2013/01/inheriting-class.html}
+  \item [5] \url{http://www.cs.au.dk/~beta/Manuals/r5.2.2/beta-intro/Virtual.html}
 \end{itemize}
 \end{frame}
 \end{document}
