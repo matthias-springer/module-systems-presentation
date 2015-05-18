@@ -251,12 +251,11 @@
           #);
         Withdraw: (# ... #);
     #);
-   account1, account2, account3: @Account;
-   K1,K2: @integer;
+   account: @Account;
+   K1: @integer;
    do 
-     100->&account1.Deposit;
-     150->&account1.Deposit->K1;
-     90->&account3.Withdraw->K2;
+     100->&account.Deposit;
+     50->&account.Withdraw->K1;
 #)
 \end{lstlisting}
 \end{frame}
@@ -288,7 +287,7 @@ P: (#
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Pattern Concepts}
+\begin{frame}{Pattern (Design) Patterns}
   \begin{itemize}
     \item \textbf{Procedure Pattern}: sequence of actions
     \item \textbf{Function Pattern}: sequence of actions with return value(s), does not change state
@@ -296,16 +295,34 @@ P: (#
   \end{itemize}
 \end{frame}
 
+\begin{frame}{Expected Benefits of Unification\textsuperscript{[6]}}
+\begin{itemize}
+  \item Design goals \begin{itemize}
+    \item ``The pattern mechanism should be the ultimate abstraction mechanism, subsuming all other known abstraction mechanisms.'' 
+    \item ``The unification should be more than just the union of existing mechanisms.''
+    \item ``All parts of a pattern should be meaningful, no matter how the pattern is applied.''
+  \end{itemize}
+  \item ``Uniform treatment of all abstraction mechanisms. [...] It ensures orthogonality among class, procedure, etc.''
+  \item Functionality: subpatterns, virtual patterns, nested patterns, pattern variables
+\end{itemize}
+\end{frame}
+
 \section{Nested Classes}
-\begin{frame}{Example: Nested Classes in Newspeak \textsuperscript{[2]}}
-\includegraphics[width=\textwidth]{resources/newspeak_basic}
+
+\begin{frame}{Nested Classes}{What is it?}
+\begin{itemize}
+  \item Class defined inside another class
+  \item Part-of relationship: nested classes belong to the enclosing class
+  \item Access to enclosing class (lookup depends on programming language)
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Nested Classes}{Benefits}
 \begin{itemize}
-  \item Namespace for classes
-  \item Group together what belongs together
-  \item Supports more sophisticated features (e.g. Class Hierarchy Inheritance)
+  \item \textbf{Namespace} for classes, avoiding name clashes
+  \item Group together what belongs together: increase \textbf{understandability} and \textbf{readability}
+  \item A form of \textbf{encapsulation}, promoting development towards an interfaces instead of an implementation (using visibility annotations)
+  \item Support for more advanced features \\ (e.g. Class Hierarchy Inheritance)
 \end{itemize}
 \end{frame}
 
@@ -334,6 +351,10 @@ P: (#
 \end{itemize}
 \end{explainframe}
 
+\begin{frame}{Example: Nested Classes in Newspeak \textsuperscript{[2]}}
+\includegraphics[width=\textwidth]{resources/newspeak_basic}
+\end{frame}
+
 \begin{frame}[fragile]{Instance Creation in Newspeak}{Nested Classes in a Nutshell for Smalltalkers}
 \begin{enumerate}
   \item Message send to class object: invoke factory method \\ (e.g. \texttt{usingPlatform:} or \texttt{new})
@@ -359,6 +380,23 @@ CombinatorialParsing>>StarParser
   ^ nested
 \end{lstlisting}
 \end{frame}
+
+\begin{frame}{Example: Class Hierarchy Inheritance}
+\centering
+\includegraphics[width=0.8\textwidth]{resources/newspeak_inheritance_challenge.pdf}
+\end{frame}
+
+\begin{explainframe}{Example: Class Hierarchy Inheritance}
+\begin{itemize}
+  \item \lstinline{ShapeLibrary}: a library for geometrical shapes, containing classes \lstinline{Shape}, \lstinline{Circle}, \lstinline{Rectangle}
+  \item \lstinline{Shape} is superclass of \lstinline{Circle} and \lstinline{Rectangle}, and provides basic rendering functionality
+  \item \textbf{Challenge:} provide a module \lstinline{ExtendShapes} which takes as input $I$ any \lstinline{ShapeLibrary} and generates a modified \lstinline{ColorShapeLibrary} where \lstinline{ColorShapeLibrary.Shape} has additional behavior for drawing colors
+  \begin{itemize}
+    \item $I$ must have a nested class \lstinline{Shape}
+    \item Override \lstinline{ColorShapeLibrary.Shape} with a new class whose superclass is $I$.\lstinline{Shape} (like method overriding)
+  \end{itemize}
+\end{itemize}
+\end{explainframe}
 
 \begin{frame}{Example: Class Hierarchy Inheritance in Newspeak \textsuperscript{[1]}}
 \centering
@@ -490,68 +528,11 @@ TrainReservation: Reservation (#
   \item No convenient access to enclosing instance
   \item Hierarchy not reflected in the source code
   \item Bad tooling support
+  \item No class hierarchy inheritance
 \end{itemize}
 \end{frame}
 
-\section{BETA}
-\begin{frame}{BETA}
-\begin{itemize}
-  \item Object-oriented, imperative programming language
-  \item Statically typed
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Virtual Patterns}
-\begin{itemize}
-  \item Non-virtual patterns
-  \begin{itemize}
-    \item Cannot be overridden or extended (under same name)
-    \item Runtime types determined at compile time
-  \end{itemize}
-  \item Virtual patterns
-  \begin{itemize}
-    \item Can be extended (must be subtype of base type)
-    \item Runtime pattern type \emph{late bound}
-  \end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Virtual Patterns}{Example (non-virtual)}
-\includegraphics[width=\textwidth]{resources/beta_virtual}
-\vfill
-\begin{itemize}
-  \item \texttt{TrainReservation.DisplayTrainReservation} should be called \texttt{TrainReservation.DisplayReservation}
-  \item \texttt{FlightReservation.DisplayFlightReservation} should be called \texttt{FlightReservation.DisplayReservation}
-  \item \texttt{*.DisplayReservation} should be late bound and executed extended coded, not just base code
-\end{itemize}
-\end{frame}
-
-\begin{frame}[fragile]{Virtual Patterns}{Example}
-\begin{verbatim}
-Point:
-  (# X,Y: @integer;
-     Init:< (# do 0->X; 0->Y; inner #);
-  #)
-
-ThreeDPoint: Point
-  (# Z: @integer;
-     Init::< (# do 0->Z; inner #);
-  #)
-\end{verbatim}
-\end{frame}
-
-\begin{frame}[fragile]{Virtual Patterns}{Virtual Class Patterns}
-
-\end{frame}
-
-\begin{frame}{Pattern Variables}
-  \begin{itemize}
-    \item Pattern structures are not first-class objects
-    \item Special handling required (e.g. prefixing variable names)
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Patterns}
+\begin{frame}{Virtual Patterns and Pattern Variables}
   \begin{itemize}
     \item Non-virtual pattern: entire type hierarchy has same pattern
     \item Virtual pattern: subtypes can have different patterns
@@ -559,6 +540,31 @@ ThreeDPoint: Point
   \end{itemize}
 \end{frame}
 
+%\begin{frame}{Virtual Patterns}{Example (non-virtual)}
+%\includegraphics[width=\textwidth]{resources/beta_virtual}
+%\vfill
+%\begin{itemize}
+%  \item \texttt{TrainReservation.DisplayTrainReservation} should be called \texttt{TrainReservation.DisplayReservation}
+%  \item \texttt{FlightReservation.DisplayFlightReservation} should be called \texttt{FlightReservation.DisplayReservation}
+%  \item \texttt{*.DisplayReservation} should be late bound and executed extended coded, not just base code
+%\end{itemize}
+%\end{frame}
+%
+%\begin{frame}[fragile]{Virtual Patterns}{Example}
+%\begin{verbatim}
+%Point:
+%  (# X,Y: @integer;
+%     Init:< (# do 0->X; 0->Y; inner #);
+%  #)
+%
+%ThreeDPoint: Point
+%  (# Z: @integer;
+%     Init::< (# do 0->Z; inner #);
+%  #)
+%\end{verbatim}
+%\end{frame}
+
+\section{Summary}
 \begin{frame}{Summary}
 \begin{itemize}
   \item Pattern = Method = Class
@@ -575,6 +581,7 @@ ThreeDPoint: Point
   \item [3] Gilad Bracha, Peter Ahe, Vassili Bykov, Yaron Kashai and Eliot Miranda. The Newspeak Programming Platform. 
   \item [4] \url{http://gbracha.blogspot.jp/2013/01/inheriting-class.html}
   \item [5] \url{http://www.cs.au.dk/~beta/Manuals/r5.2.2/beta-intro/Virtual.html}
+  \item [6] Bent Bruun Kristensen, Ole Lehrmann Madsen, and Birger Møller-Pedersen. 2007. The when, why and why not of the BETA programming language.
 \end{itemize}
 \end{frame}
 \end{document}
