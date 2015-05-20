@@ -176,7 +176,7 @@
 
 % Dokument-Meta-Daten:
 %%%%%%%%%%%%%%%%%%%%%%%
-\title{Newspeak and BETA}
+\title{BETA and Newspeak}
 \subtitle{Seminar Module Systems, SS2015}
 \author{Fabio Niephaus, Matthias Springer}
 \date{\today}
@@ -200,13 +200,13 @@
 
 \begin{frame}{Introduction}
 \begin{itemize}
-    \item BETA: ``a modern language in the Simula tradition''
+    \item BETA: ``A modern language in the Simula tradition''
     \begin{itemize}
       \item Designed by Birger Møller-Pedersen and Kristen Nygaard (\emph{Scandinavian School})
       \item Class = Method = Pattern
       \item Nested Patterns
     \end{itemize}
-    \item Newspeak: ``a new programming language in the tradition of Self and Smalltalk''
+    \item Newspeak: ``A new programming language in the tradition of Self and Smalltalk''
     \begin{itemize}
       \item Designed by Gilad Bracha et al.
       \item Nested Classes
@@ -268,21 +268,23 @@
 \end{itemize}
 \vfill
 \begin{verbatim}
-P: (# 
-  Decl1; Decl2; ...; Decln
-  enter In
-  do Imp
-  exit Out
+Pattern: (# 
+  Declaration1; Declaration1; ...; DeclarationN
+  enter InputArguments
+  do Implementation
+  exit OutputArguments
 #)
 \end{verbatim}
 \end{frame}
 
 \begin{frame}{Subpatterns}{Specialization by Simple Inheritance}
+\begin{align*} 
+  Resulting \ properties &= & inherited \ properties &+ new \ properties\\
+  Resulting \ behavior &= & inherited \ behavivor &+ new \ behavior\\
+  Resulting \ arguments &= & inherited \ arguments &+ new \ arguments\\
+  Resulting \ results &= & inherited \ results &+ new \ results
+\end{align*}
 \begin{itemize}
-  \item Resulting properties = inherited properties + new properties
-  \item Resulting behavior = inherited behavivor + new behavior
-  \item Resulting arguments = inherited arguments + new arguments
-  \item Resulting results = inherited results + new results
   \item Method execution starts at base method: use \texttt{inner} to call specialized method
 \end{itemize}
 \end{frame}
@@ -571,6 +573,7 @@ TrainReservation: Reservation (#
   \item Nested patterns: work like virtual methods in other programming languages
   \item More than Java nested classes: Java nested classes are not virtual
   \item Workaround for nested classes in other programming languages: factory
+  \item TODO: Newspeak Summary?
 \end{itemize}
 \end{frame}
 
