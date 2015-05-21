@@ -488,31 +488,31 @@ class Outer {
 \begin{lstlisting}
 Reservation: (#
   date: @Date;
-  DisplayReservation: (# do date.Display; INNER; #)
+  DisplayReservation: (# do date.PrintToConsole; INNER; #)
   Display:< DisplayReservation
 #)
 
 TrainReservation: Reservation (#
   seat: @Seat;
-  DisplayTrainReservation: DisplayReservation (# do seat.Display; INNER; #)
+  DisplayTrainReservation: DisplayReservation (# do seat.PrintToConsole; INNER; #)
   Display::< DisplayTrainReservation
 #)
 \end{lstlisting}
 \end{frame}
 
-\begin{frame}[fragile]{BETA Nested Classes}
+\begin{explainframe}[fragile]{BETA Nested Classes}
 \begin{lstlisting}
 Reservation: (#
   date: @Date;
-  Display:< (# do date.Display; INNER; #)
+  Display:< (# do date.PrintToConsole; INNER; #)
 #)
 
 TrainReservation: Reservation (#
   seat: @Seat;
-  Display::< (# do seat.Display; INNER; #)
+  Display::< (# do seat.PrintToConsole; INNER; #)
 #)
 \end{lstlisting}
-\end{frame}
+\end{explainframe}
 
 \begin{explainframe}{BETA Nested Classes}
 \begin{itemize}
