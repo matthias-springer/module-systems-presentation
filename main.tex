@@ -215,10 +215,6 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Concepts}
-
-\end{frame}
-
 \section{Unification: The Pattern}
 
 \begin{frame}[fragile]{Patterns}
@@ -298,6 +294,14 @@ Pattern: (#
 \end{itemize}
 \end{frame}
 
+\begin{explainframe}{Virtual Patterns and Pattern Variables}
+  \begin{itemize}
+    \item Non-virtual pattern: entire type hierarchy has same pattern
+    \item Virtual pattern: subtypes can have different patterns
+    \item Pattern variables: every object can have a different pattern
+  \end{itemize}
+\end{explainframe}
+
 \begin{frame}{Pattern (Design) Patterns}
   \begin{itemize}
     \item \textbf{Procedure Pattern}: sequence of actions
@@ -357,14 +361,18 @@ Pattern: (#
 \begin{verbatim}
 Reservation: (#
   date: @Date;
-  DisplayReservation: (# do date.PrintToConsole; INNER; #)
-  Display:< DisplayReservation
+  Display:< (# do date.PrintToConsole; INNER; #)
 #)
 
 TrainReservation: Reservation (#
   seat: @Seat;
-  DisplayTrainReservation: DisplayReservation (# do seat.PrintToConsole; INNER; #)
-  Display::< DisplayTrainReservation
+  Display::< (# do seat.PrintToConsole; INNER; #)
+#)
+
+(#
+  reservation: ^Reservation;
+  do
+    &reservation.Display
 #)
 \end{verbatim}
 \end{frame}
@@ -373,12 +381,15 @@ TrainReservation: Reservation (#
 \begin{verbatim}
 Reservation: (#
   date: @Date;
-  Display:< (# do date.PrintToConsole; INNER; #)
+  DisplayReservation: (# do date.PrintToConsole; INNER; #)
+  Display:< DisplayReservation
 #)
 
 TrainReservation: Reservation (#
   seat: @Seat;
-  Display::< (# do seat.PrintToConsole; INNER; #)
+  DisplayTrainReservation: DisplayReservation (# 
+    do seat.PrintToConsole; #)
+  Display::< DisplayTrainReservation
 #)
 \end{verbatim}
 \end{explainframe}
@@ -398,11 +409,10 @@ TrainReservation: Reservation (#
   \item \textbf{Slots:} instance variables
   \item \textbf{Module Definition:} a class object that acts as a module
   \begin{itemize}
-    \item has to be a top level class
+    \item has to be a top-level class
     \item has its own namespace which is represented by a \lstinline{platform} object
     \item is stateless
     \item its external dependencies are listed at the top of the class
-    \item TODO
   \end{itemize}
   \item \textbf{Module:} an instance of a module definition
 \end{itemize}
@@ -410,6 +420,20 @@ TrainReservation: Reservation (#
 
 \begin{frame}{Example: Nested Classes in Newspeak \textsuperscript{[2]}}
 \includegraphics[width=\textwidth]{resources/newspeak_basic}
+\end{frame}
+
+\begin{frame}{\texttt{platform} Object instead of Global Namespace\textsuperscript{[8]}}
+\begin{itemize}
+  \item \lstinline{platform} contains references to top-level modules required by the application (mapping identifiers to top-level modules)
+  \begin{itemize}
+    \item Provided by the system: collections, file system, drawing, kernel classes, \ldots
+    \item Provided by the developer: custom libraries
+    \item Contains all dependencies required for deployment
+  \end{itemize}
+  \item Created using IDE support, then object graph serialization
+  \item \lstinline{Platform>>main:args:} is the application's entry point
+  \item \lstinline{platform} is similar to Squeak environments
+\end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]{Instance Creation in Newspeak}{Nested Classes in a Nutshell for Smalltalkers}
@@ -516,7 +540,7 @@ ExtendedShapes>>ColorShapeLibrary
 \end{itemize}
 \end{explainframe}
 
-\begin{frame}[fragile]{Newspeak avoids method name clashes by superclasses}{Example}
+\begin{frame}[fragile]{Newspeak Avoids Method Name Clashes by Superclasses}{Example}
 \begin{lstlisting}
 class Super {
   //int m(){ return 42; }
@@ -541,14 +565,6 @@ class Outer {
   \item Bad tooling support
   \item No class hierarchy inheritance
 \end{itemize}
-\end{frame}
-
-\begin{frame}{Virtual Patterns and Pattern Variables}
-  \begin{itemize}
-    \item Non-virtual pattern: entire type hierarchy has same pattern
-    \item Virtual pattern: subtypes can have different patterns
-    \item Pattern variables: every object can have a different pattern
-  \end{itemize}
 \end{frame}
 
 %\begin{frame}{Virtual Patterns}{Example (non-virtual)}
@@ -579,14 +595,16 @@ class Outer {
 \begin{frame}{Summary}
 \begin{itemize}
   \item Pattern = Method = Class
-  \item Nested patterns: work like virtual methods in other programming languages
+  \item Nested patterns/classes: work like virtual methods in other programming languages
   \item More than Java nested classes: Java nested classes are not virtual
   \item Workaround for nested classes in other programming languages: factory
-  \item TODO: Newspeak Summary?
+  \item No global namespace in Newspeak: \lstinline{platform} object provides all dependencies
+  \item Newspeak: all names are late bound
 \end{itemize}
 \end{frame}
 
 \begin{frame}{References}
+\footnotesize
 \begin{itemize}
   \item [1] Gilad Bracha, Peter Ahe, Vassili Bykov, Yaron Kashai, William Maddox and Eliot Miranda. Modules as Objects in Newspeak.
   \item [2] Gilad Bracha, Peter Ahe and Vassili Bykov. Newspeak on Squeak: A Guide for the Perplexed.
@@ -595,6 +613,7 @@ class Outer {
   \item [5] \url{http://www.cs.au.dk/~beta/Manuals/r5.2.2/beta-intro/Virtual.html}
   \item [6] Bent Bruun Kristensen, Ole Lehrmann Madsen, and Birger Møller-Pedersen. 2007. The when, why and why not of the BETA programming language.
   \item [7]  Madsen, O. L.: Abstraction and Modularization in the BETA Programming Language.
+  \item [8] \url{http://gbracha.blogspot.de/2008/12/living-without-global-namespaces.html}
 \end{itemize}
 \end{frame}
 \end{document}
