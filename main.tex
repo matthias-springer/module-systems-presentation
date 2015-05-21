@@ -221,45 +221,6 @@
 
 \section{Unification: The Pattern}
 
-\begin{frame}{Unification of Abstraction Mechanisms: The Pattern}
-\begin{itemize}
-\item Instances of a procedure are procedure activations
-\item Instances of a class are objects
-\item Instances of a function are function activations
-\item Instances of a type are values
-\end{itemize}
-\vfill
-(see Madsen, O. L.: Abstraction and Modularization in the BETA Programming Language)
-\end{frame}
-
-\begin{explainframe}{Similarities between Objects and Procedure Activations}
-\begin{itemize}
-  \item Procedure activation = Activation record + execution of code
-  \item Activation record is similar to object: data items and local procedures (nested procedures in languages with block structure)
-\end{itemize}
-\end{explainframe}
-
-\begin{frame}[fragile]{Example}
-\begin{lstlisting}
-(# Account:
-    (#  balance: @integer;
-        Deposit:
-          (# amount: @integer
-             enter amount
-             do balance+amount->balance
-             exit balance
-          #);
-        Withdraw: (# ... #);
-    #);
-   account: @Account;
-   K1: @integer;
-   do 
-     100->&account.Deposit;
-     50->&account.Withdraw->K1;
-#)
-\end{lstlisting}
-\end{frame}
-
 \begin{frame}[fragile]{Patterns}
 \begin{itemize}
   \item Classes and methods are patterns
@@ -276,6 +237,54 @@ Pattern: (#
 #)
 \end{verbatim}
 \end{frame}
+
+\begin{frame}{Unification of Abstraction Mechanisms: The Pattern\textsuperscript{[7]}}
+\begin{itemize}
+\item Instances of a procedure are procedure activations
+\item Instances of a class are objects
+\item Instances of a function are function activations
+\item Instances of a type are values
+\end{itemize}
+\end{frame}
+
+\begin{explainframe}{Similarities between Objects and Procedure Activations}
+\begin{itemize}
+  \item Procedure activation = Activation record + execution of code
+  \item Activation record is similar to object: data items and local procedures (nested procedures in languages with block structure)
+\end{itemize}
+\end{explainframe}
+
+\begin{frame}[fragile]{Example}
+\begin{verbatim}
+(# 
+    Account: (#  balance: @integer;
+        Deposit:
+          (# amount: @integer
+             enter amount
+             do balance+amount->balance
+             exit balance
+          #);
+        Withdraw: (# ... #);
+    #);
+   account: @Account;
+   K1: @integer;
+   do 
+     100->&account.Deposit;
+     50->&account.Withdraw->K1;
+#)
+\end{verbatim}
+\end{frame}
+
+\begin{explainframe}{Beta Syntax}
+\begin{itemize}
+  \item \texttt{(\# ... \#)} for block structure
+  \item \texttt{$@$Type} for static references
+  \item \texttt{\^{}Type} for dynamic references
+  \item \texttt{\&Type} for instance creation
+  \item \texttt{[]} aquires a references instead of object execution
+  \item \texttt{\&Account[]} returns a dynamic reference to a new account instance
+\end{itemize}
+\end{explainframe}
 
 \begin{frame}{Subpatterns}{Specialization by Simple Inheritance}
 \begin{align*} 
@@ -335,6 +344,52 @@ Pattern: (#
   \item \textbf{BETA, Newspeak:} nested classes are virtual and can be overridden
 \end{itemize}
 \end{frame}
+
+\begin{frame}[fragile]{BETA Nested Classes}
+\begin{itemize}
+  \item Virtual methods can be overridden in subclasses
+  \item Virtual classes can be overridden in subclasses
+  \item Virtual patterns can be overridden in subclasses
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{BETA Nested Classes}
+\begin{verbatim}
+Reservation: (#
+  date: @Date;
+  DisplayReservation: (# do date.PrintToConsole; INNER; #)
+  Display:< DisplayReservation
+#)
+
+TrainReservation: Reservation (#
+  seat: @Seat;
+  DisplayTrainReservation: DisplayReservation (# do seat.PrintToConsole; INNER; #)
+  Display::< DisplayTrainReservation
+#)
+\end{verbatim}
+\end{frame}
+
+\begin{explainframe}{BETA Nested Classes}
+\begin{verbatim}
+Reservation: (#
+  date: @Date;
+  Display:< (# do date.PrintToConsole; INNER; #)
+#)
+
+TrainReservation: Reservation (#
+  seat: @Seat;
+  Display::< (# do seat.PrintToConsole; INNER; #)
+#)
+\end{verbatim}
+\end{explainframe}
+
+\begin{explainframe}{BETA Nested Classes}
+\begin{itemize}
+  \item Only virtual patterns can be overridden (denoted by \lstinline{:<})
+  \item Overriding pattern must be a subpattern of superpattern
+  \item Pattern execution starts with base pattern (\lstinline{inner} instead of \lstinline{super})
+\end{itemize}
+\end{explainframe}
 
 \begin{explainframe}{Nested Classes in Newspeak \textsuperscript{[3]}}
 \begin{itemize}
@@ -478,52 +533,6 @@ class Outer {
 
 \end{frame}
 
-\begin{frame}[fragile]{BETA Nested Classes}
-\begin{itemize}
-  \item Virtual methods can be overridden in subclasses
-  \item Virtual classes can be overridden in subclasses
-  \item Virtual patterns can be overridden in subclasses
-\end{itemize}
-\end{frame}
-
-\begin{frame}[fragile]{BETA Nested Classes}
-\begin{lstlisting}
-Reservation: (#
-  date: @Date;
-  DisplayReservation: (# do date.PrintToConsole; INNER; #)
-  Display:< DisplayReservation
-#)
-
-TrainReservation: Reservation (#
-  seat: @Seat;
-  DisplayTrainReservation: DisplayReservation (# do seat.PrintToConsole; INNER; #)
-  Display::< DisplayTrainReservation
-#)
-\end{lstlisting}
-\end{frame}
-
-\begin{explainframe}[fragile]{BETA Nested Classes}
-\begin{lstlisting}
-Reservation: (#
-  date: @Date;
-  Display:< (# do date.PrintToConsole; INNER; #)
-#)
-
-TrainReservation: Reservation (#
-  seat: @Seat;
-  Display::< (# do seat.PrintToConsole; INNER; #)
-#)
-\end{lstlisting}
-\end{explainframe}
-
-\begin{explainframe}{BETA Nested Classes}
-\begin{itemize}
-  \item Only virtual patterns can be overridden (denoted by \lstinline{:<})
-  \item Overriding pattern must be a subpattern of superpattern
-  \item Pattern execution starts with base pattern (\lstinline{inner} instead of \lstinline{super})
-\end{itemize}
-\end{explainframe}
-
 \begin{frame}{Poor Man's Nested Classes\textsuperscript{[4]}}{Classes as First Class Objects}
 \begin{itemize}
   \item Scoping rules are different
@@ -585,6 +594,7 @@ TrainReservation: Reservation (#
   \item [4] \url{http://gbracha.blogspot.jp/2013/01/inheriting-class.html}
   \item [5] \url{http://www.cs.au.dk/~beta/Manuals/r5.2.2/beta-intro/Virtual.html}
   \item [6] Bent Bruun Kristensen, Ole Lehrmann Madsen, and Birger Møller-Pedersen. 2007. The when, why and why not of the BETA programming language.
+  \item [7]  Madsen, O. L.: Abstraction and Modularization in the BETA Programming Language.
 \end{itemize}
 \end{frame}
 \end{document}
