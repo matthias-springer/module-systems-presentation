@@ -1,4 +1,4 @@
-\documentclass[xcolor=dvipsname,handout]{beamer} %handout, ignorenonframetext
+\documentclass[xcolor=dvipsname, handout]{beamer} %handout, ignorenonframetext
 
 %\usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
@@ -226,7 +226,7 @@
 \vfill
 \begin{verbatim}
 Pattern: (# 
-  Declaration1; Declaration1; ...; DeclarationN
+  Declaration1; Declaration2; ...; DeclarationN
   enter InputArguments
   do Implementation
   exit OutputArguments
@@ -402,6 +402,10 @@ TrainReservation: Reservation (#
 \end{itemize}
 \end{explainframe}
 
+\begin{frame}{Example: Nested Classes in Newspeak \textsuperscript{[2]}}
+\includegraphics[width=\textwidth]{resources/newspeak_basic}
+\end{frame}
+
 \begin{explainframe}{Nested Classes in Newspeak \textsuperscript{[3]}}
 \begin{itemize}
   \item \textbf{Methods:} instance methods
@@ -417,10 +421,6 @@ TrainReservation: Reservation (#
   \item \textbf{Module:} an instance of a module definition
 \end{itemize}
 \end{explainframe}
-
-\begin{frame}{Example: Nested Classes in Newspeak \textsuperscript{[2]}}
-\includegraphics[width=\textwidth]{resources/newspeak_basic}
-\end{frame}
 
 \begin{frame}{\texttt{platform} Object instead of Global Namespace\textsuperscript{[8]}}
 \begin{itemize}
@@ -456,7 +456,7 @@ CombinatorialParser class>>usingPlatform: platform
 CombinatorialParsing>>StarParser
   | nested | "important: nested is cached"
   nested := self CombinatorialParser subclass: #StarParser 
-      instanceVariableNames: 'subparser'.
+      instanceVariableNames: 'parent subparser'.
   nested compile: 'parse: input ^ ...'
   ^ nested
 \end{lstlisting}
