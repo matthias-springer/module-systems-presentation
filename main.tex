@@ -225,16 +225,31 @@
 
 \end{frame}
 
-\section{Implementation}
-\begin{frame}{Lazy Class Generation}
 
+\section{Implementation}
+
+\begin{frame}{Lazy Class Generation}
+\centering
+\includegraphics[width=\textwidth]{lazy_class_gen.pdf}
 \end{frame}
+
+\begin{explainframe}{Lazy Class Generation}
+\begin{itemize}
+  \item Class accessor generates and caches nested class.
+  \item Cache is a \texttt{WeakIdentityKeyDictionary} (instance variable of corresponding \texttt{MethodSpecification}).
+  \item All \emph{entirely} class-side nested classes are initialized upon module instantiation (except for class-side nested classes that have an inst-side ancestor).
+\end{itemize}
+\end{explainframe}
 
 \begin{frame}{Meta-Model and Instantiation}
 
 \end{frame}
 
 \begin{frame}{Early vs. Late \texttt{outer} Binding}
+
+\end{frame}
+
+\begin{frame}{Class Lookup}
 
 \end{frame}
 
