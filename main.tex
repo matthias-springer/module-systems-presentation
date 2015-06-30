@@ -108,7 +108,17 @@
 }{%
 \end{frame}%
 \setboolean{isexplainframe}{false}
-}}
+}
+\newenvironment{clearexplainframe}[0]{
+\setboolean{isexplainframe}{true}
+\addtocounter{framenumber}{-1}
+\setbeamertemplate{background}[grid][step=5mm,color=LightGray]
+\begin{frame}[fragile,environment=clearexplainframe]%
+}{%
+\end{frame}%
+\setboolean{isexplainframe}{false}
+}
+}
 \mode<beamer>{
 \excludecomment{explainframe}
 }
@@ -195,16 +205,60 @@
 
 
 \section{Introduction}
-\begin{frame}{Recap: Newspeak Nested Classes}
 
+\begin{frame}{Modularity}
+\begin{table}
+TODO: add definition of modularity
+\end{table}
+\end{frame}
+
+\begin{frame}{Recap: Newspeak Nested Classes}
+  \begin{itemize}
+    \item Class = methods, nested classes, slots (instance variables).
+    \item Late Binding: all references to class names are self sends.
+    \item External Configuration: \texttt{platform} object contains external dependencies.
+    \item Lookup: lexical scope, then inheritance chain
+  \end{itemize}
 \end{frame}
 
 \section{Concept}
-\begin{frame}{Nested Classes in Squeak}
+\begin{frame}{Goals}
+  \begin{itemize}
+    \item Better \textbf{understandability} and \textbf{readability} through hierarchical decomposition.
+    \item More and fine-grained \textbf{code resuse} through mixin modularity (modules).
+    \item \textbf{Resource management} with resources as class members.
+    \item Avoiding \textbf{class name clashes} with classes as namespaces.
+    \item Later (?): avoiding \textbf{extension method clashes} with COP layers.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Nested Classes in Squeak}
+\begin{minipage}{.5\textwidth}
+  \includegraphics[width=\textwidth]{nested_classes.pdf}
+\end{minipage}% This must go next to `\end{minipage}`
+\begin{minipage}{.1\textwidth}
+\qquad
+\end{minipage}% This must go next to `\end{minipage}`
+\begin{minipage}{.4\textwidth}
+  \begin{lstlisting}
+A new B new D method.
+
+A new B E method.
+
+A C new F method.
+
+A C G method.
+
+
+  \end{lstlisting}
+(UML notation)
+
+\end{minipage}
+
 
 \end{frame}
 
-\section{Why Nested Classes?}
+\section{Use Cases}
 \begin{frame}{Namespaces}
 
 \end{frame}
@@ -242,27 +296,147 @@
 \end{explainframe}
 
 \begin{frame}{Meta-Model and Instantiation}
-
+  \centering
+  \includegraphics[width=0.8\textwidth]{metamodel.pdf}
 \end{frame}
 
 \begin{frame}{Early vs. Late \texttt{outer} Binding}
+\begin{table}
+\centering
+\includegraphics[width=0.7\textwidth]{outer_binding.pdf}
+\end{table}
 
+\begin{itemize}
+  \item Method \texttt{outer} is late bound.
+  \item Keyword \texttt{outer} is early bound.
+\end{itemize}
 \end{frame}
+
+\begin{explainframe}{Early vs. Late \texttt{outer} Binding}
+\begin{lstlisting}
+A2>>method
+  ^ { outer. self outer}
+
+A2 new outer.
+" returns { A1. A1. } "
+
+B2 new outer.
+" returns { A1. B1. } "
+\end{lstlisting}
+
+\begin{itemize}
+  \item \texttt{outer} keyword is bound as \texttt{CompiledMethod} literal.
+  \item Early binding is useful for class binding, to avoid accidential name capturing.
+\end{itemize}
+\end{explainframe}
 
 \begin{frame}{Class Lookup}
+  \begin{table}
+    \centering
+    \includegraphics[width=0.75\textwidth]{class_lookup.pdf}
+  \end{table}
 
+  \begin{itemize}
+    \item Order: \texttt{self}, \texttt{outer}, \texttt{outer outer}, \ldots
+    \item References to classes contained in ancestors are early bound (unless \texttt{self} send).
+    \item References to nested classes of myself are late bound.
+  \end{itemize}
 \end{frame}
 
-\begin{frame}{Class Generators (Mixins)}
+\begin{explainframe}{Class Lookup}
+\begin{lstlisting}
+B2>>method
+  ^ { A1.   " early bound "
+      B1.   " early bound "
+      B2.   " early bound "
+      C1.   " lookup fails "
+      C2.   " late bound "
+      C3.   " late bound "
+    }
+\end{lstlisting}
 
+\begin{itemize}
+  \item Early bound ancestors lookup is identical to using \texttt{outer} keyword: \\ \texttt{B2 == outer B1} in \texttt{B2}.
+  \item Late bound lookup can be forced using self sends: \texttt{self outer B1} (have to specify full path).
+\end{itemize}
+\end{explainframe}
+
+\begin{frame}[fragile]{Class Generators (Mixins)}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth]{class_generator.pdf}
+\end{figure}
+
+\begin{lstlisting}
+ModelBase << Validation << Persistance
+\end{lstlisting}
 \end{frame}
+
+\begin{explainframe}{Class Generators (Mixin)}
+\begin{lstlisting}
+CollectionMixin := Object subclassWithInstVars: 'target'.
+
+CollectionMixin>>Inner>>collect: aBlock
+  ^ ...
+
+Class>> << mixin
+  ^ (mixin new
+    target: self;
+    Inner) subclass
+\end{lstlisting}
+\end{explainframe}
 
 \begin{frame}{Versioning Helpers}
-
+  \begin{itemize}
+    \item Use class-side nested classes as version containers.
+    \item \texttt{MathLibrary v1 v2}
+    \item Development process: write code in \texttt{MathLibrary dev}, system provides a way to copy \texttt{dev} and add it as a new version.
+  \end{itemize}
 \end{frame}
 
+\begin{frame}{Module System Base Library}
+  Subclass from these classes to build \ldots
+  \begin{itemize}
+    \item \texttt{ClassGenerator}: \ldots mixin modules, providing helper methods.
+    \item \texttt{Module}: \ldots top-level classes.
+    \item \texttt{Namespace}: \ldots non-instantiable classes (pure namespace classes).
+    \item \texttt{ResourceDictionary}: (a mixin module to use a class like a dictionary).
+    \item \texttt{TestCaseHolder}: \ldots test cases (container for \texttt{TestCase} subclasses).
+    \item \texttt{Tests}: (contains tests for the module system iteself).
+    \item \texttt{Uninstantiable}: (a mixin module marking a class as uninstantiable (namespace)).
+    \item \texttt{Version}: \ldots versions/releases.
+    \item \texttt{Versioning:} (a mixin module providing convenience methods (e.g. \texttt{latest})).
+    \item \texttt{VersioningModule}: \ldots top-level classes containing versions.
+    \item \texttt{VersioningVersion}: \ldots versions containing versions.
+  \end{itemize}
+\end{frame}
+
+\begin{clearexplainframe}
+  \centering
+  \includegraphics[width=\textwidth]{screenshot_ms.png}
+\end{clearexplainframe}
+
+
+\begin{explainframe}{Module System Base Library}
+\begin{lstlisting}
+Namespace := Object subclass << Uninstantiable.
+TestCaseHolder := Object subclass << Uninstantiable.
+Tests := TestCaseHolder subclass.
+VersioningModule := Module subclass << Versioning.
+VersioningVersion := Version subclass << Versioning.
+\end{lstlisting}
+\end{explainframe}
 
 \section{Next Steps}
+
+\begin{frame}{Next Steps}
+  \begin{itemize}
+    \item Class migration and live system editing
+    \item COP layer for extension methods
+    \item Solve performance issues during model instantiation
+    \item UI polishing and tool adaptation (debugger etc.)
+  \end{itemize}
+\end{frame}
 
 \section{Summary}
 
