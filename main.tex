@@ -186,11 +186,11 @@
 
 % Dokument-Meta-Daten:
 %%%%%%%%%%%%%%%%%%%%%%%
-\title{Nested Class for Squeak Smalltalk}
+\title{Nested Class for Squeak/Smalltalk}
 \subtitle{Seminar Module Systems, SS2015}
 \author{Jan Graichen, Bastian Kruck, Fabio Niephaus, Matthias Springer}
 \date{\today}
-\institute[2012]{Hasso Plattner Institute, Software Architecture Group}
+\institute[2015]{Software Architecture Group, Hasso Plattner Institute}
 
 
 
@@ -214,10 +214,10 @@ TODO: add definition of modularity
 
 \begin{frame}{Recap: Newspeak Nested Classes}
   \begin{itemize}
-    \item Class = methods, nested classes, slots (instance variables).
+    \item Class = methods + nested classes + slots (instance variables).
     \item Late Binding: all references to class names are self sends.
     \item External Configuration: \texttt{platform} object contains external dependencies.
-    \item Lookup: lexical scope, then inheritance chain
+    \item Lookup: lexical scope, then inheritance chain.
   \end{itemize}
 \end{frame}
 
@@ -460,7 +460,7 @@ Class>> << mixin
 \begin{frame}{Versioning Helpers}
   \begin{itemize}
     \item Use class-side nested classes as version containers.
-    \item \texttt{MathLibrary v1 v2}
+    \item \texttt{MathLibrary v1 v2}.
     \item Development process: write code in \texttt{MathLibrary dev}, system provides a way to copy \texttt{dev} and add it as a new version.
   \end{itemize}
 \end{frame}
@@ -506,10 +506,11 @@ VersioningVersion := Version subclass << Versioning.
 
 \begin{frame}{Integration in Squeak}
 \begin{itemize}
-  \item New system browser. Old browser cannot be used.
-  \item Filesystem import/export instead of Monticello.
-  \item Testrunner works.
-  \item Debugger works, but still shows transformed source code.
+  \item Compatible to Squeak-Trunk.
+  \item New Vivide-based system browser (old browser is incompatible).
+  \item Custom import/export format wit Git support (Monticello is incompatible).
+  \item Testrunner can be used as normal.
+  \item Debugger works, but shows transformed source code.
 \end{itemize}
 \end{frame}
 
