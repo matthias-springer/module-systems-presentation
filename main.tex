@@ -498,17 +498,29 @@ VersioningVersion := Version subclass << Versioning.
 \end{lstlisting}
 \end{explainframe}
 
-\section{Next Steps}
-
-\begin{frame}{Next Steps}
-  \begin{itemize}
-    \item Class migration and live system editing
-    \item COP layer for extension methods
-    \item Solve performance issues during model instantiation
-    \item UI polishing and tool adaptation (debugger etc.)
-  \end{itemize}
+\section{Integration in Squeak}
+\begin{frame}{Integration in Squeak}
+  \centering
+  \includegraphics[width=\textwidth]{screenshot_integration.png}
 \end{frame}
 
-\section{Summary}
+\begin{frame}{Integration in Squeak}
+\begin{itemize}
+  \item New system browser. Old browser cannot be used.
+  \item Filesystem import/export instead of Monticello.
+  \item Testrunner works.
+  \item Debugger works, but still shows transformed source code.
+\end{itemize}
+\end{frame}
+
+\section{Next Steps}
+\begin{frame}{Next Steps}
+  \begin{itemize}
+    \item Class migration and live system editing.
+    \item COP layer for extension methods.
+    \item Solve performance issues during model instantiation.
+    \item UI polishing and tool adaptation (debugger, sender/implementors/... etc.).
+  \end{itemize}
+\end{frame}
 
 \end{document}
