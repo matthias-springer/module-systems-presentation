@@ -121,6 +121,7 @@
 }
 \mode<beamer>{
 \excludecomment{explainframe}
+\excludecomment{clearexplainframe}
 }
 
 \setbeamertemplate{footline}{%
@@ -186,7 +187,7 @@
 
 % Dokument-Meta-Daten:
 %%%%%%%%%%%%%%%%%%%%%%%
-\title{Nested Class for Squeak Smalltalk}
+\title{Nested Classes for Squeak/Smalltalk}
 \subtitle{Seminar Module Systems, SS2015}
 \author{Jan Graichen, Bastian Kruck, Fabio Niephaus, Matthias Springer}
 \date{\today}
@@ -204,29 +205,11 @@
 \end{frame}
 
 
-\section{Introduction}
-
-\begin{frame}{Modularity}
-\begin{table}
-TODO: add definition of modularity
-\end{table}
-\end{frame}
-
-\begin{frame}{Recap: Newspeak Nested Classes}
-  \begin{itemize}
-    \item Class = methods, nested classes, slots (instance variables).
-    \item Late Binding: all references to class names are self sends.
-    \item External Configuration: \texttt{platform} object contains external dependencies.
-    \item Lookup: lexical scope, then inheritance chain
-  \end{itemize}
-\end{frame}
-
 \section{Concept}
 \begin{frame}{Goals}
   \begin{itemize}
     \item Better \textbf{understandability} and \textbf{readability} through hierarchical decomposition.
     \item More and fine-grained \textbf{code reuse} through mixin modularity (modules).
-    \item \textbf{Resource management} with resources as class members.
     \item Avoiding \textbf{class name clashes} with classes as namespaces.
     \item Later (?): avoiding \textbf{extension method clashes} with COP layers.
   \end{itemize}
@@ -310,25 +293,13 @@ point := MathLibrary v1 latest Geometry Shapes Point x: 13 y: 37.
 \begin{explainframe}{\texttt{IteratorExample}}
   \begin{itemize}
     \item \texttt{Iterator} is an adapter.
-    \item \texttt{Iterator} is an inst-side nested class and bound (belongs to) and instance of \texttt{HashSet}.
+    \item \texttt{Iterator} is an inst-side nested class and bound to (belongs to) an instance of \texttt{HashSet}.
     \item Can be used as a form of interface encapsulation: developer can pass an instance of \texttt{Iterator} around instead of \texttt{HashSet}, making sure that nobody accesses private API (unless \texttt{Iterator>>outer} is called).
   \end{itemize}
 
 \begin{table}
   \centering
   \includegraphics[width=0.8\textwidth]{screenshot_iterator.png}
-\end{table}
-\end{explainframe}
-
-\begin{explainframe}{\texttt{Sokoban} Resource Management}
-  \begin{itemize}
-    \item Resources are class members, but not stored as source code.
-    \item Resources are exported/imported using \texttt{writeResourceTo:}/\texttt{newFromStream:}.
-  \end{itemize}
-
-\begin{table}
-  \centering
-  \includegraphics[width=0.8\textwidth]{screenshot_sokoban_res.png}
 \end{table}
 \end{explainframe}
 
@@ -344,7 +315,6 @@ point := MathLibrary v1 latest Geometry Shapes Point x: 13 y: 37.
 \begin{itemize}
   \item Class = new directory + corresponding method file.
   \item Method = source code file.
-  \item Resource = resource file + corresponding method file.
   \item \texttt{classname/class} for class-side, \texttt{classname/instance} for inst-side.
   \item System provides \emph{load} and \emph{save} functionality, but no merge (should be done via underlying version control system).
 \end{itemize}
@@ -371,16 +341,17 @@ point := MathLibrary v1 latest Geometry Shapes Point x: 13 y: 37.
   \includegraphics[width=0.8\textwidth]{metamodel.pdf}
 \end{frame}
 
-\begin{frame}{Early vs. Late \texttt{outer} Binding}
-\begin{table}
-\centering
-\includegraphics[width=0.7\textwidth]{outer_binding.pdf}
-\end{table}
+\section{Class Lookup}
+\begin{frame}{Accessing Enclosing Object}
+  \begin{itemize}
+    \item \texttt{outer} keyword: reference to enclosing object according to \textbf{lexical scope of method} (early bound)
+    \item \texttt{outer} method: returns enclosing object of receiver's class (late bound)
+  \end{itemize}
 
-\begin{itemize}
-  \item Method \texttt{outer} is late bound.
-  \item Keyword \texttt{outer} is early bound.
-\end{itemize}
+  \begin{table}
+    \centering
+    \includegraphics[width=0.7\textwidth]{outer_binding.pdf}
+    \end{table}
 \end{frame}
 
 \begin{explainframe}{Early vs. Late \texttt{outer} Binding}
@@ -408,95 +379,167 @@ B2 new outer.
   \end{table}
 
   \begin{itemize}
-    \item Order: \texttt{self}, \texttt{outer}, \texttt{outer outer}, \ldots
-    \item References to classes contained in ancestors are early bound (unless \texttt{self} send).
-    \item References to nested classes of myself are late bound.
+    \item Message sends: late bound, glboal identifierts: early bound
+    \item New keywords and methods: \texttt{outer}, \texttt{scope}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Class Lookup (Example)}
+  \begin{itemize}
+    \item \textbf{In general:} message sends are late bound, global identifiers are early bound (Smalltalk style)
+    \item \texttt{self C2}: lookup in self, then superclasses (late bound)
+    \item \texttt{outer B1}: \texttt{outer} early bound according to method's lexical scope
+    \item \texttt{self outer B1}: \texttt{outer} late bound according to receiver's class
+    \item \texttt{scope Z1}: shortcut for \texttt{outer outer ... outer Z1}
+    \item \texttt{self scope Z1}: first \texttt{outer} late bound
+    \item \texttt{C2}: lookup in self, then outer scope, then superclasses (early bound)
   \end{itemize}
 \end{frame}
 
 \begin{explainframe}{Class Lookup}
-\begin{lstlisting}
-B2>>method
-  ^ { A1.   " early bound "
-      B1.   " early bound "
-      B2.   " early bound "
-      C1.   " lookup fails "
-      C2.   " late bound "
-      C3.   " late bound "
-    }
-\end{lstlisting}
-
 \begin{itemize}
-  \item Early bound ancestors lookup is identical to using \texttt{outer} keyword: \\ \texttt{B2 == outer B1} in \texttt{B2}.
-  \item Late bound lookup can be forced using self sends: \texttt{self outer B1} (have to specify full path).
+  \item Smalltalk style: globals are early bound, message sends are late bound
+  \item Newspeak style: no globals, everything is late bound (with implicit receiver)
+  \item Use Cases:
+  \begin{itemize}
+    \item Early bound to outer object: avoid accidential class shadowing
+    \item Late bound to nested class: class hierarchy inheritance ($\rightarrow$ see Newspeak papers), alternative implementation for depencency injection
+    \item Late bound to outer object: mixin access to outer scope of resulting (generated) class
+    \item Early bound to nested class: ?
+  \end{itemize}
 \end{itemize}
 \end{explainframe}
 
+\section{Mixin Modularity}
 \begin{frame}[fragile]{Class Generators (Mixins)}
+\begin{table}
+\textbf{Mixin:} a function from classes to classes
+\end{table}
+\begin{minipage}{0.45\textwidth}
+What our nested classes do:
+\begin{enumerate}
+  \item Take a class (result of accessor method)
+  \item Add (copy) methods to class
+  \item Return class
+\end{enumerate}
+\end{minipage} %comment
+\begin{minipage}{0.45\textwidth}
+How our mixins work:
+\begin{enumerate}
+  \item Take a class
+  \item Create a subclass
+  \item Add (copy) methods to class
+  \item Return class
+\end{enumerate}
+\end{minipage}
+
 \begin{figure}
   \centering
   \includegraphics[width=0.5\textwidth]{class_generator.pdf}
 \end{figure}
+\tiny
+(see Bracha, Cook: ``Mixin-based Inheritance'')
 
-\begin{lstlisting}
-ModelBase << Validation << Persistance
-\end{lstlisting}
+%\begin{lstlisting}
+%(Object << Validation << Persistance) subclassWithInstVars: 'first last registrationNo'
+%\end{lstlisting}
 \end{frame}
 
-\begin{explainframe}{Class Generators (Mixin)}
+\begin{explainframe}{Class Generators (Mixins)}
 \begin{lstlisting}
-CollectionMixin := Object subclassWithInstVars: 'target'.
+ClassGenerator class>>for: base
+    ^ self new
+        target: base;
+        Inner
 
-CollectionMixin>>Inner>>collect: aBlock
-  ^ ...
+ClassGenerator>>Inner
+    ^ target subclass
 
 Class>> << mixin
-  ^ (mixin new
-    target: self;
-    Inner) subclass
+    ^ mixin for: self
 \end{lstlisting}
 \end{explainframe}
 
-\begin{frame}{Versioning Helpers}
-  \begin{itemize}
-    \item Use class-side nested classes as version containers.
-    \item \texttt{MathLibrary v1 v2}
-    \item Development process: write code in \texttt{MathLibrary dev}, system provides a way to copy \texttt{dev} and add it as a new version.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Module System Base Library}
-  Subclass from these classes to build \ldots
-  \begin{itemize}
-    \item \texttt{ClassGenerator}: \ldots mixin modules, providing helper methods.
-    \item \texttt{Module}: \ldots top-level classes.
-    \item \texttt{Namespace}: \ldots non-instantiable classes (pure namespace classes).
-    \item \texttt{ResourceDictionary}: (a mixin module to use a class like a dictionary).
-    \item \texttt{TestCaseHolder}: \ldots test cases (container for \texttt{TestCase} subclasses).
-    \item \texttt{Tests}: (contains tests for the module system iteself).
-    \item \texttt{Uninstantiable}: (a mixin module marking a class as uninstantiable (namespace)).
-    \item \texttt{Version}: \ldots versions/releases.
-    \item \texttt{Versioning:} (a mixin module providing convenience methods (e.g. \texttt{latest})).
-    \item \texttt{VersioningModule}: \ldots top-level classes containing versions.
-    \item \texttt{VersioningVersion}: \ldots versions containing versions.
-  \end{itemize}
-\end{frame}
-
-\begin{clearexplainframe}
-  \centering
-  \includegraphics[width=\textwidth]{screenshot_ms.png}
-\end{clearexplainframe}
-
-
-\begin{explainframe}{Module System Base Library}
+\begin{frame}[fragile]{Mixin Modularity (Example 1)}
 \begin{lstlisting}
-Namespace := Object subclass << Uninstantiable.
-TestCaseHolder := Object subclass << Uninstantiable.
-Tests := TestCaseHolder subclass.
-VersioningModule := Module subclass << Versioning.
-VersioningVersion := Version subclass << Versioning.
+Collection
+    ^ Object subclassWithInstVars: 'array'
 \end{lstlisting}
-\end{explainframe}
+\end{frame}
+
+\begin{frame}[fragile]{Mixin Modularity (Example 2)}
+\begin{lstlisting}
+Collection
+    ^ (Object << CollectionMixin)
+        subclassWithInstVars: 'array'
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Mixin Modularity (Example 3)}
+\begin{lstlisting}
+Collection
+    ^ (Object << CollectionLogicMixin << CollectionFilterMixin)
+        subclassWithInstVars: 'array'
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Mixin-based Traits}
+\begin{itemize}
+  \item Post-include hook: replace duplicate methods with exception-raising methods
+  \item Resolve conflicts manually in generated class
+\end{itemize}
+\begin{lstlisting}
+ColorRectangle
+    ^ (Object << RectangleTrait << ColorTrait) subclass
+
+ColorRectangle>> == anObject
+    | e1 e2 |
+    e1 := RectangleTrait traitPerform: #== withArguments: { anObject } in: self.
+    e2 := ColorTrait traitPerform: #== withArguments: { anObject } in: self.
+    ^ e1 & e2
+\end{lstlisting}
+\end{frame}
+
+%\begin{frame}{Versioning Helpers}
+%  \begin{itemize}
+%    \item Use class-side nested classes as version containers.
+%    \item \texttt{MathLibrary v1 v2}
+%    \item Development process: write code in \texttt{MathLibrary dev}, system provides a way to copy \texttt{dev} and add it as a new version.
+%  \end{itemize}
+%\end{frame}
+
+%\begin{frame}{Module System Base Library}
+%  Subclass from these classes to build \ldots
+%  \begin{itemize}
+%    \item \texttt{ClassGenerator}: \ldots mixin modules, providing helper methods.
+%    \item \texttt{Module}: \ldots top-level classes.
+%    \item \texttt{Namespace}: \ldots non-instantiable classes (pure namespace classes).
+%    \item \texttt{ResourceDictionary}: (a mixin module to use a class like a dictionary).
+%    \item \texttt{TestCaseHolder}: \ldots test cases (container for \texttt{TestCase} subclasses).
+%    \item \texttt{Tests}: (contains tests for the module system iteself).
+%    \item \texttt{Uninstantiable}: (a mixin module marking a class as uninstantiable (namespace)).
+%    \item \texttt{Version}: \ldots versions/releases.
+%    \item \texttt{Versioning:} (a mixin module providing convenience methods (e.g. \texttt{latest})).
+%    \item \texttt{VersioningModule}: \ldots top-level classes containing versions.
+%    \item \texttt{VersioningVersion}: \ldots versions containing versions.
+%  \end{itemize}
+%\end{frame}
+
+%\begin{clearexplainframe}
+%  \centering
+%  \includegraphics[width=\textwidth]{screenshot_ms.png}
+%\end{clearexplainframe}
+
+
+%\begin{explainframe}{Module System Base Library}
+%\begin{lstlisting}
+%Namespace := Object subclass << Uninstantiable.
+%TestCaseHolder := Object subclass << Uninstantiable.
+%Tests := TestCaseHolder subclass.
+%VersioningModule := Module subclass << Versioning.
+%VersioningVersion := Version subclass << Versioning.
+%\end{lstlisting}
+%\end{explainframe}
 
 \section{Integration in Squeak}
 \begin{frame}{Integration in Squeak}

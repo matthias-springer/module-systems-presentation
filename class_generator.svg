@@ -7,10 +7,38 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    width="401"
    height="201"
-   id="svg10127">
+   id="svg10127"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="class_generator.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1624"
+     inkscape:window-height="978"
+     id="namedview29"
+     showgrid="true"
+     inkscape:zoom="1.7256858"
+     inkscape:cx="36.655362"
+     inkscape:cy="34.054936"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3006" />
+  </sodipodi:namedview>
   <defs
      id="defs10129">
     <marker
@@ -46,7 +74,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -96,15 +124,16 @@
        id="path10659"
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <text
-       x="304.89267"
+       x="329.57608"
        y="297.02698"
        id="text10661"
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
-         x="304.89267"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       sodipodi:linespacing="125%"><tspan
+         x="329.57608"
          y="297.02698"
          id="tspan10663"
-         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">(base class)</tspan></text>
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">target</tspan></text>
     <rect
        width="165"
        height="75"
@@ -148,5 +177,56 @@
          y="447.36218"
          id="tspan11233"
          style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">(add new methods)</tspan></text>
+    <text
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"
+       id="text3008"
+       y="442.86218"
+       x="44.5"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+         id="tspan3010"
+         y="442.86218"
+         x="44.5">- target</tspan><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+         y="442.86218"
+         x="44.5"
+         id="tspan3012" /><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+         y="442.86218"
+         x="44.5"
+         id="tspan3014" /><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+         y="442.86218"
+         x="44.5"
+         id="tspan3016" /></text>
+    <text
+       sodipodi:linespacing="125%"
+       x="44.5"
+       y="457.86218"
+       id="text3028"
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="44.5"
+         y="457.86218"
+         id="tspan3030"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">+ Inner</tspan></text>
+    <text
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"
+       id="text3038"
+       y="472.86218"
+       x="44.5"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+         id="tspan3040"
+         y="472.86218"
+         x="44.5">+ for:</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 5,198.24747 35,0"
+       id="path3042"
+       inkscape:connector-curvature="0"
+       transform="translate(39.5,276.86218)" />
   </g>
 </svg>
