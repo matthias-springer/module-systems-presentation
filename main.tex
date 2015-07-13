@@ -469,27 +469,45 @@ Class>> << mixin
 \end{lstlisting}
 \end{explainframe}
 
-\begin{frame}[fragile]{Mixin Modularity (Example 1)}
+\begin{frame}[fragile]{Mixin Modularity (1/3)}
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=0.8\textwidth]{mixin_basic.pdf}
+\end{minipage} %comment
+\begin{minipage}{0.65\textwidth}
 \begin{lstlisting}
 Collection
     ^ Object subclassWithInstVars: 'array'
 \end{lstlisting}
+\end{minipage}
 \end{frame}
 
-\begin{frame}[fragile]{Mixin Modularity (Example 2)}
+\begin{frame}[fragile]{Mixin Modularity (2/3)}
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=0.8\textwidth]{mixin_1.pdf}
+\end{minipage} %comment
+\begin{minipage}{0.65\textwidth}
 \begin{lstlisting}
 Collection
     ^ (Object << CollectionMixin)
         subclassWithInstVars: 'array'
 \end{lstlisting}
+\end{minipage}
 \end{frame}
 
-\begin{frame}[fragile]{Mixin Modularity (Example 3)}
+\begin{frame}[fragile]{Mixin Modularity (3/3)}
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=0.8\textwidth]{mixin_2.pdf}
+\end{minipage} %comment
+\begin{minipage}{0.65\textwidth}
 \begin{lstlisting}
 Collection
     ^ (Object << CollectionLogicMixin << CollectionFilterMixin)
         subclassWithInstVars: 'array'
 \end{lstlisting}
+\end{minipage}
 \end{frame}
 
 \begin{frame}[fragile]{Mixin-based Traits}

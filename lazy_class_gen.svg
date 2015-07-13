@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="881"
+   width="831"
    height="521"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="lazy_class_gen.pdf">
+   sodipodi:docname="lazy_class_gen.svg">
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -22,9 +22,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="228.27981"
-     inkscape:cy="185.369"
+     inkscape:zoom="0.9899495"
+     inkscape:cx="476.06237"
+     inkscape:cy="436.26416"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -38,170 +38,184 @@
      fit-margin-right="0"
      fit-margin-bottom="0">
     <inkscape:grid
-       id="grid2985"
-       type="xygrid"
-       empspacing="5"
-       visible="true"
-       enabled="true"
-       snapvisiblegridlinesonly="true"
+       originy="-599.5px"
        originx="-59.5px"
-       originy="-599.5px" />
+       snapvisiblegridlinesonly="true"
+       enabled="true"
+       visible="true"
+       empspacing="5"
+       type="xygrid"
+       id="grid2985" />
   </sodipodi:namedview>
   <defs
      id="defs4">
     <marker
-       style="overflow:visible"
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
        id="Arrow1Mend"
-       refX="0"
-       refY="0"
-       orient="auto"
-       inkscape:stockid="Arrow1Mend">
+       style="overflow:visible">
       <path
-         transform="matrix(-0.4,0,0,-0.4,-4,0)"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         inkscape:connector-curvature="0"
          id="path3812"
-         inkscape:connector-curvature="0" />
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
     </marker>
     <marker
-       style="overflow:visible"
+       inkscape:stockid="Arrow1Send"
+       orient="auto"
+       refY="0"
+       refX="0"
        id="Arrow1Send"
-       refX="0"
-       refY="0"
-       orient="auto"
-       inkscape:stockid="Arrow1Send">
+       style="overflow:visible">
       <path
-         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         inkscape:connector-curvature="0"
          id="path3818"
-         inkscape:connector-curvature="0" />
-    </marker>
-    <marker
-       style="overflow:visible"
-       id="Arrow1Lend"
-       refX="0"
-       refY="0"
-       orient="auto"
-       inkscape:stockid="Arrow1Lend">
-      <path
-         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
          style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
          id="path3806"
-         inkscape:connector-curvature="0" />
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
     </marker>
     <marker
-       style="overflow:visible"
+       inkscape:stockid="Arrow1Mendo"
+       orient="auto"
+       refY="0"
+       refX="0"
        id="Arrow1Mendo"
-       refX="0"
-       refY="0"
-       orient="auto"
-       inkscape:stockid="Arrow1Mendo">
+       style="overflow:visible">
       <path
-         transform="matrix(-0.4,0,0,-0.4,-4,0)"
-         style="fill:#666666;fill-rule:evenodd;stroke:#666666;stroke-width:1pt"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         inkscape:connector-curvature="0"
          id="path6386"
-         inkscape:connector-curvature="0" />
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill:#666666;fill-rule:evenodd;stroke:#666666;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
     </marker>
     <marker
-       style="overflow:visible"
+       inkscape:stockid="Arrow1MendV"
+       orient="auto"
+       refY="0"
+       refX="0"
        id="Arrow1MendV"
-       refX="0"
-       refY="0"
-       orient="auto"
-       inkscape:stockid="Arrow1MendV">
+       style="overflow:visible">
       <path
-         transform="matrix(-0.4,0,0,-0.4,-4,0)"
-         style="fill:#666666;fill-rule:evenodd;stroke:#666666;stroke-width:1pt"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         inkscape:connector-curvature="0"
          id="path6389"
-         inkscape:connector-curvature="0" />
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill:#666666;fill-rule:evenodd;stroke:#666666;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
     </marker>
     <marker
-       style="overflow:visible"
+       inkscape:stockid="Arrow1Mend6"
+       orient="auto"
+       refY="0"
+       refX="0"
        id="Arrow1Mend6"
-       refX="0"
-       refY="0"
-       orient="auto"
-       inkscape:stockid="Arrow1Mend6">
+       style="overflow:visible">
       <path
-         transform="matrix(-0.4,0,0,-0.4,-4,0)"
-         style="fill:#666666;fill-rule:evenodd;stroke:#666666;stroke-width:1pt"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         inkscape:connector-curvature="0"
          id="path6392"
-         inkscape:connector-curvature="0" />
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill:#666666;fill-rule:evenodd;stroke:#666666;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
     </marker>
     <marker
-       style="overflow:visible"
+       inkscape:stockid="Arrow1MendS"
+       orient="auto"
+       refY="0"
+       refX="0"
        id="Arrow1MendS"
-       refX="0"
-       refY="0"
-       orient="auto"
-       inkscape:stockid="Arrow1MendS">
+       style="overflow:visible">
       <path
-         transform="matrix(-0.4,0,0,-0.4,-4,0)"
-         style="fill:#666666;fill-rule:evenodd;stroke:#666666;stroke-width:1pt"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         inkscape:connector-curvature="0"
          id="path6395"
-         inkscape:connector-curvature="0" />
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill:#666666;fill-rule:evenodd;stroke:#666666;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
     </marker>
     <marker
-       style="overflow:visible"
+       inkscape:stockid="Arrow1Mend9"
+       orient="auto"
+       refY="0"
+       refX="0"
        id="Arrow1Mend9"
-       refX="0"
-       refY="0"
-       orient="auto"
-       inkscape:stockid="Arrow1Mend9">
+       style="overflow:visible">
       <path
-         transform="matrix(-0.4,0,0,-0.4,-4,0)"
-         style="fill:#666666;fill-rule:evenodd;stroke:#666666;stroke-width:1pt"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         inkscape:connector-curvature="0"
          id="path6398"
-         inkscape:connector-curvature="0" />
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill:#666666;fill-rule:evenodd;stroke:#666666;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
     </marker>
     <marker
-       style="overflow:visible"
+       inkscape:stockid="Arrow1MendT"
+       orient="auto"
+       refY="0"
+       refX="0"
        id="Arrow1MendT"
-       refX="0"
-       refY="0"
-       orient="auto"
-       inkscape:stockid="Arrow1MendT">
+       style="overflow:visible">
       <path
-         transform="matrix(-0.4,0,0,-0.4,-4,0)"
-         style="fill:#666666;fill-rule:evenodd;stroke:#666666;stroke-width:1pt"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         inkscape:connector-curvature="0"
          id="path6401"
-         inkscape:connector-curvature="0" />
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill:#666666;fill-rule:evenodd;stroke:#666666;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
     </marker>
     <marker
-       style="overflow:visible"
+       inkscape:stockid="Arrow1Mendv"
+       orient="auto"
+       refY="0"
+       refX="0"
        id="Arrow1Mendv"
-       refX="0"
-       refY="0"
-       orient="auto"
-       inkscape:stockid="Arrow1Mendv">
+       style="overflow:visible">
       <path
-         transform="matrix(-0.4,0,0,-0.4,-4,0)"
-         style="fill:#666666;fill-rule:evenodd;stroke:#666666;stroke-width:1pt"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         inkscape:connector-curvature="0"
          id="path6404"
-         inkscape:connector-curvature="0" />
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill:#666666;fill-rule:evenodd;stroke:#666666;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
     </marker>
     <marker
-       style="overflow:visible"
-       id="Arrow1Mendx"
-       refX="0"
-       refY="0"
+       inkscape:stockid="Arrow1Mendx"
        orient="auto"
-       inkscape:stockid="Arrow1Mendx">
+       refY="0"
+       refX="0"
+       id="Arrow1Mendx"
+       style="overflow:visible">
       <path
-         transform="matrix(-0.4,0,0,-0.4,-4,0)"
-         style="fill:#666666;fill-rule:evenodd;stroke:#666666;stroke-width:1pt"
-         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         inkscape:connector-curvature="0"
          id="path6407"
-         inkscape:connector-curvature="0" />
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill:#666666;fill-rule:evenodd;stroke:#666666;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1MendX"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1MendX"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4282"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill:#666666;fill-rule:evenodd;stroke:#666666;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
     </marker>
   </defs>
   <metadata
@@ -212,776 +226,813 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     id="layer1"
-     inkscape:groupmode="layer"
+     transform="translate(-59.5,68.137817)"
      inkscape:label="Layer 1"
-     transform="translate(-59.5,68.137817)">
-    <rect
-       y="-62.637817"
-       x="540"
-       height="140"
-       width="390"
-       id="rect6739"
-       style="fill:#f2f2f2;stroke:none" />
+     inkscape:groupmode="layer"
+     id="layer1">
     <rect
        style="fill:#f2f2f2;stroke:none"
-       id="rect6729"
-       width="220"
+       id="rect6739"
+       width="340"
        height="140"
-       x="300"
+       x="540"
        y="-62.637817" />
+    <rect
+       y="-62.637817"
+       x="300"
+       height="140"
+       width="220"
+       id="rect6729"
+       style="fill:#f2f2f2;stroke:none" />
     <text
-       sodipodi:linespacing="125%"
-       id="text2989"
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="60"
        y="52.362183"
-       x="60"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       xml:space="preserve"><tspan
-         style="font-size:20px;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
-         y="52.362183"
-         x="60"
+       id="text2989"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
          id="tspan2991"
-         sodipodi:role="line">(class accessor called)</tspan></text>
+         x="60"
+         y="52.362183"
+         style="font-size:20px;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">(class accessor called)</tspan></text>
     <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="155.0789"
-       y="152.08218"
+       sodipodi:linespacing="125%"
        id="text2993"
-       sodipodi:linespacing="125%"><tspan
-         id="tspan2997"
-         sodipodi:role="line"
-         x="155.0789"
-         y="152.08218"
-         style="font-size:20px;text-align:center;text-anchor:middle;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">cached class exists</tspan><tspan
-         id="tspan3001"
-         sodipodi:role="line"
-         x="155.0789"
-         y="177.08218"
-         style="font-size:20px;text-align:center;text-anchor:middle;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">for <tspan
-   id="tspan5146"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Courier;-inkscape-font-specification:Courier">self</tspan>?</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="379.76999"
-       y="151.35219"
-       id="text3003"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3005"
-         x="382.54343"
-         y="151.35219"
-         style="font-size:20px;text-align:center;text-anchor:middle;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">generate </tspan><tspan
-         id="tspan3015"
-         sodipodi:role="line"
-         x="379.76999"
-         y="176.35219"
-         style="font-size:20px;text-align:center;text-anchor:middle;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">class</tspan></text>
-    <text
-       sodipodi:linespacing="125%"
-       id="text3007"
        y="152.08218"
-       x="529.82001"
+       x="155.0789"
        style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:20px;text-align:center;text-anchor:middle;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
          y="152.08218"
-         x="532.59344"
-         id="tspan3009"
-         sodipodi:role="line">initialize </tspan><tspan
-         id="tspan3017"
+         x="155.0789"
+         sodipodi:role="line"
+         id="tspan2997">cached class exists</tspan><tspan
          style="font-size:20px;text-align:center;text-anchor:middle;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
          y="177.08218"
-         x="529.82001"
-         sodipodi:role="line">class</tspan></text>
+         x="155.0789"
+         sodipodi:role="line"
+         id="tspan3001">for <tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Courier;-inkscape-font-specification:Courier"
+   id="tspan5146">self</tspan>?</tspan></text>
     <text
-       xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="690.01001"
+       sodipodi:linespacing="125%"
+       id="text3003"
        y="151.35219"
-       id="text3011"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3013"
-         x="692.78345"
-         y="151.35219"
-         style="font-size:20px;text-align:center;text-anchor:middle;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">put in </tspan><tspan
-         id="tspan3019"
-         sodipodi:role="line"
-         x="690.01001"
-         y="176.35219"
-         style="font-size:20px;text-align:center;text-anchor:middle;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">class cache</tspan></text>
-    <rect
-       y="132.36218"
-       x="60"
-       height="50"
-       width="190"
-       id="rect3789"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none" />
-    <rect
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
-       id="rect3791"
-       width="100"
-       height="50"
-       x="330"
-       y="132.36218" />
-    <rect
-       y="132.36218"
-       x="480"
-       height="50"
-       width="100"
-       id="rect3793"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none" />
-    <rect
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
-       id="rect3795"
-       width="120"
-       height="50"
-       x="630"
-       y="132.36218" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path3797"
-       d="m 150,62.362189 0,59.999991"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path4243"
-       d="m 260,162.36218 60,0"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path4427"
-       d="m 440,162.36218 30,0"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path4611"
-       d="m 590,162.36218 30,0"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path4795"
-       d="m 150,192.36218 0,90.00001"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)" />
-    <text
-       sodipodi:linespacing="125%"
-       id="text4797"
-       y="311.35217"
-       x="149.76999"
+       x="379.76999"
        style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:20px;text-align:center;text-anchor:middle;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
-         y="311.35217"
-         x="152.54343"
-         id="tspan4799"
-         sodipodi:role="line">return </tspan><tspan
+         y="151.35219"
+         x="382.54343"
+         id="tspan3005"
+         sodipodi:role="line">generate </tspan><tspan
          style="font-size:20px;text-align:center;text-anchor:middle;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
-         y="336.35217"
-         x="149.76999"
+         y="176.35219"
+         x="379.76999"
          sodipodi:role="line"
-         id="tspan4801">class</tspan></text>
+         id="tspan3015">class</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="529.82001"
+       y="152.08218"
+       id="text3007"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3009"
+         x="532.59344"
+         y="152.08218"
+         style="font-size:20px;text-align:center;text-anchor:middle;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">initialize </tspan><tspan
+         sodipodi:role="line"
+         x="529.82001"
+         y="177.08218"
+         style="font-size:20px;text-align:center;text-anchor:middle;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+         id="tspan3017">class</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3011"
+       y="151.35219"
+       x="690.01001"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:20px;text-align:center;text-anchor:middle;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+         y="151.35219"
+         x="692.78345"
+         id="tspan3013"
+         sodipodi:role="line">put in </tspan><tspan
+         style="font-size:20px;text-align:center;text-anchor:middle;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+         y="176.35219"
+         x="690.01001"
+         sodipodi:role="line"
+         id="tspan3019">class cache</tspan></text>
     <rect
-       y="292.36218"
-       x="100"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect3789"
+       width="190"
+       height="50"
+       x="60"
+       y="132.36218" />
+    <rect
+       y="132.36218"
+       x="330"
        height="50"
        width="100"
-       id="rect4803"
+       id="rect3791"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect3793"
+       width="100"
+       height="50"
+       x="480"
+       y="132.36218" />
+    <rect
+       y="132.36218"
+       x="630"
+       height="50"
+       width="120"
+       id="rect3795"
        style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none" />
     <path
-       inkscape:connector-curvature="0"
-       id="path4989"
-       d="m 690,192.36218 0,50 -540,0"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    <text
-       sodipodi:linespacing="125%"
-       id="text4991"
-       y="297.36218"
-       x="492.85715"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       xml:space="preserve"><tspan
-         id="tspan4993"
-         sodipodi:role="line"
-         x="492.85715"
-         y="297.36218" /></text>
-    <text
-       xml:space="preserve"
-       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
-       x="550"
-       y="332.36218"
-       id="text4995"
-       sodipodi:linespacing="125%"><tspan
-         id="tspan4999"
-         sodipodi:role="line"
-         x="550"
-         y="332.36218"
-         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">outer</tspan></text>
-    <text
-       sodipodi:linespacing="125%"
-       id="text5003"
-       y="332.36218"
-       x="620"
-       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
-       xml:space="preserve"><tspan
-         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
-         y="332.36218"
-         x="620"
-         sodipodi:role="line"
-         id="tspan5005">inner</tspan></text>
-    <text
-       sodipodi:linespacing="125%"
-       id="text5007"
-       y="362.36218"
-       x="550"
-       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
-       xml:space="preserve"><tspan
-         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
-         y="362.36218"
-         x="550"
-         sodipodi:role="line"
-         id="tspan5009">an A</tspan></text>
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="m 150,62.362189 0,59.999991"
+       id="path3797"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="m 260,162.36218 60,0"
+       id="path4243"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="m 440,162.36218 30,0"
+       id="path4427"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="m 590,162.36218 30,0"
+       id="path4611"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="m 150,192.36218 0,90.00001"
+       id="path4795"
+       inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
-       x="550"
-       y="382.36218"
-       id="text5011"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="149.76999"
+       y="311.35217"
+       id="text4797"
        sodipodi:linespacing="125%"><tspan
-         id="tspan5013"
          sodipodi:role="line"
-         x="550"
-         y="382.36218"
-         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">an A</tspan></text>
-    <text
-       sodipodi:linespacing="125%"
-       id="text5015"
-       y="402.36218"
-       x="550"
-       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
-       xml:space="preserve"><tspan
-         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
-         y="402.36218"
-         x="550"
+         id="tspan4799"
+         x="152.54343"
+         y="311.35217"
+         style="font-size:20px;text-align:center;text-anchor:middle;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">return </tspan><tspan
+         id="tspan4801"
          sodipodi:role="line"
-         id="tspan5017">an A</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
-       x="620"
-       y="362.36218"
-       id="text5019"
-       sodipodi:linespacing="125%"><tspan
-         id="tspan5021"
-         sodipodi:role="line"
-         x="620"
-         y="362.36218"
-         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">(an A) B</tspan></text>
-    <text
-       sodipodi:linespacing="125%"
-       id="text5023"
-       y="382.36218"
-       x="620"
-       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
-       xml:space="preserve"><tspan
-         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
-         y="382.36218"
-         x="620"
-         sodipodi:role="line"
-         id="tspan5025">(an A) B</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
-       x="620"
-       y="402.36218"
-       id="text5027"
-       sodipodi:linespacing="125%"><tspan
-         id="tspan5029"
-         sodipodi:role="line"
-         x="620"
-         y="402.36218"
-         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">(an A) B</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
-       x="550"
-       y="426.36218"
-       id="text5031"
-       sodipodi:linespacing="125%"><tspan
-         id="tspan5033"
-         sodipodi:role="line"
-         x="550"
-         y="426.36218"
-         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">...</tspan></text>
-    <text
-       sodipodi:linespacing="125%"
-       id="text5035"
-       y="426.36218"
-       x="620"
-       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
-       xml:space="preserve"><tspan
-         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
-         y="426.36218"
-         x="620"
-         sodipodi:role="line"
-         id="tspan5037">...</tspan></text>
+         x="149.76999"
+         y="336.35217"
+         style="font-size:20px;text-align:center;text-anchor:middle;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">class</tspan></text>
     <rect
-       y="312.36218"
-       x="520"
-       height="130"
-       width="140"
-       id="rect5039"
-       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none" />
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect4803"
+       width="100"
+       height="50"
+       x="100"
+       y="292.36218" />
     <path
-       inkscape:connector-curvature="0"
-       id="path5041"
-       d="m 520,342.36218 140,0"
-       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path5043"
-       d="m 580,312.36218 0,130"
-       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 690,192.36218 0,50 -540,0"
+       id="path4989"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="492.85715"
+       y="297.36218"
+       id="text4991"
+       sodipodi:linespacing="125%"><tspan
+         y="297.36218"
+         x="492.85715"
+         sodipodi:role="line"
+         id="tspan4993" /></text>
     <text
        sodipodi:linespacing="125%"
-       id="text5045"
+       id="text4995"
        y="332.36218"
-       x="720"
+       x="550"
        style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
          y="332.36218"
-         x="720"
+         x="550"
          sodipodi:role="line"
-         id="tspan5047">outer</tspan></text>
+         id="tspan4999">outer</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
-       x="790"
+       x="620"
        y="332.36218"
-       id="text5049"
+       id="text5003"
        sodipodi:linespacing="125%"><tspan
-         id="tspan5051"
+         id="tspan5005"
          sodipodi:role="line"
-         x="790"
+         x="620"
          y="332.36218"
          style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">inner</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
-       x="720"
+       x="550"
        y="362.36218"
-       id="text5053"
+       id="text5007"
        sodipodi:linespacing="125%"><tspan
-         id="tspan5055"
+         id="tspan5009"
          sodipodi:role="line"
-         x="720"
+         x="550"
          y="362.36218"
-         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">A</tspan></text>
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">an A</tspan></text>
     <text
        sodipodi:linespacing="125%"
-       id="text5065"
+       id="text5011"
+       y="382.36218"
+       x="550"
+       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+         y="382.36218"
+         x="550"
+         sodipodi:role="line"
+         id="tspan5013">an A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
+       x="550"
+       y="402.36218"
+       id="text5015"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan5017"
+         sodipodi:role="line"
+         x="550"
+         y="402.36218"
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">an A</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text5019"
        y="362.36218"
-       x="790"
+       x="620"
        style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
          y="362.36218"
-         x="790"
+         x="620"
          sodipodi:role="line"
-         id="tspan5067">A B</tspan></text>
+         id="tspan5021">(an A) B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
+       x="620"
+       y="382.36218"
+       id="text5023"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan5025"
+         sodipodi:role="line"
+         x="620"
+         y="382.36218"
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">(an A) B</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text5027"
+       y="402.36218"
+       x="620"
+       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+         y="402.36218"
+         x="620"
+         sodipodi:role="line"
+         id="tspan5029">(an A) B</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text5031"
+       y="426.36218"
+       x="550"
+       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+         y="426.36218"
+         x="550"
+         sodipodi:role="line"
+         id="tspan5033">...</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
+       x="620"
+       y="426.36218"
+       id="text5035"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan5037"
+         sodipodi:role="line"
+         x="620"
+         y="426.36218"
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">...</tspan></text>
     <rect
        style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
-       id="rect5085"
+       id="rect5039"
        width="140"
-       height="60"
-       x="690"
+       height="130"
+       x="520"
        y="312.36218" />
     <path
        style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 690,342.36218 140,0"
-       id="path5087"
+       d="m 520,342.36218 140,0"
+       id="path5041"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 750,312.36218 0,60"
-       id="path5089"
+       d="m 580,312.36218 0,130"
+       id="path5043"
        inkscape:connector-curvature="0" />
     <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
+       x="720"
+       y="332.36218"
+       id="text5045"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan5047"
+         sodipodi:role="line"
+         x="720"
+         y="332.36218"
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">outer</tspan></text>
+    <text
        sodipodi:linespacing="125%"
-       id="text5091"
-       y="292.36218"
+       id="text5049"
+       y="332.36218"
+       x="790"
+       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+         y="332.36218"
+         x="790"
+         sodipodi:role="line"
+         id="tspan5051">inner</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text5053"
+       y="362.36218"
+       x="720"
+       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+         y="362.36218"
+         x="720"
+         sodipodi:role="line"
+         id="tspan5055">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
+       x="790"
+       y="362.36218"
+       id="text5065"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan5067"
+         sodipodi:role="line"
+         x="790"
+         y="362.36218"
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">A B</tspan></text>
+    <rect
+       y="312.36218"
+       x="690"
+       height="60"
+       width="140"
+       id="rect5085"
+       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path5087"
+       d="m 690,342.36218 140,0"
+       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path5089"
+       d="m 750,312.36218 0,60"
+       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
        x="520"
+       y="292.36218"
+       id="text5091"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan5093"
+         sodipodi:role="line"
+         x="520"
+         y="292.36218"
+         style="font-size:14px;font-weight:bold;text-align:start;text-anchor:start;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola Bold">inst-side nesting</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text5095"
+       y="292.36218"
+       x="690"
        style="font-size:14px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:14px;font-weight:bold;text-align:start;text-anchor:start;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola Bold"
          y="292.36218"
-         x="520"
+         x="690"
          sodipodi:role="line"
-         id="tspan5093">inst-side nesting</tspan></text>
+         id="tspan5097">class-side nesting</tspan></text>
+    <rect
+       style="fill:none;stroke:#666666;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:3, 3;stroke-dashoffset:0"
+       id="rect5099"
+       width="330"
+       height="180"
+       x="510"
+       y="272.36218" />
+    <path
+       style="fill:#666666;stroke:#666666;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0"
+       d="m 620,192.36218 c -140,80 -140,80 -140,80"
+       id="path5101"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#666666;stroke:#666666;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0"
+       d="m 760,192.36218 110,80"
+       id="path5103"
+       inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       style="font-size:14px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
-       x="690"
-       y="292.36218"
-       id="text5095"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
+       x="350.01553"
+       y="-21.844818"
+       id="text5124"
        sodipodi:linespacing="125%"><tspan
-         id="tspan5097"
+         id="tspan5128"
          sodipodi:role="line"
-         x="690"
-         y="292.36218"
-         style="font-size:14px;font-weight:bold;text-align:start;text-anchor:start;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola Bold">class-side nesting</tspan></text>
-    <rect
-       y="272.36218"
-       x="510"
-       height="180"
-       width="330"
-       id="rect5099"
-       style="fill:none;stroke:#666666;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:3, 3;stroke-dashoffset:0" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path5101"
-       d="m 620,192.36218 c -140,80 -140,80 -140,80"
-       style="fill:#666666;stroke:#666666;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path5103"
-       d="m 760,192.36218 110,80"
-       style="fill:#666666;stroke:#666666;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0" />
-    <g
-       id="g6681"
-       transform="translate(0,-7.5)">
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
          x="350.01553"
-         y="-14.344817"
-         id="text5124"
-         sodipodi:linespacing="125%"><tspan
-           id="tspan5128"
-           sodipodi:role="line"
-           x="350.01553"
-           y="-14.344817"
-           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">assert not</tspan><tspan
-           sodipodi:role="line"
-           x="350.01553"
-           y="3.1551828"
-           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
-           id="tspan5132">initialized</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text5134"
-         y="-14.471294"
-         x="460.09528"
-         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
-         xml:space="preserve"><tspan
-           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
-           y="-14.471294"
-           x="460.09528"
-           sodipodi:role="line"
-           id="tspan5142">install <tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#666666;font-family:Courier;-inkscape-font-specification:Courier"
-   id="tspan5144">outer</tspan></tspan><tspan
-           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
-           y="4.303659"
-           x="460.09528"
-           sodipodi:role="line"
-           id="tspan5189">method</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
-         x="590.00702"
-         y="-14.344817"
-         id="text5148"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           x="590.00702"
-           y="-14.344817"
-           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
-           id="tspan5159">generate</tspan><tspan
-           sodipodi:role="line"
-           x="590.00702"
-           y="3.1551828"
-           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
-           id="tspan5163">class name</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text5165"
-         y="-15.109818"
-         x="689.98053"
-         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
-         xml:space="preserve"><tspan
-           id="tspan5169"
-           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
-           y="-15.109818"
-           x="689.98053"
-           sodipodi:role="line">mark as</tspan><tspan
-           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
-           y="2.3901815"
-           x="689.98053"
-           sodipodi:role="line"
-           id="tspan5173">generated</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
-         x="785.13226"
-         y="-13.833817"
-         id="text5175"
-         sodipodi:linespacing="125%"><tspan
-           id="tspan5179"
-           sodipodi:role="line"
-           x="785.13226"
-           y="-13.833817"
-           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">install</tspan><tspan
-           sodipodi:role="line"
-           x="785.13226"
-           y="3.6661835"
-           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
-           id="tspan5183">methods</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text5191"
-         y="-13.833817"
-         x="879.9325"
-         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
-         xml:space="preserve"><tspan
-           id="tspan5195"
-           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
-           y="-13.833817"
-           x="879.9325"
-           sodipodi:role="line">run class</tspan><tspan
-           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
-           y="3.6661835"
-           x="879.9325"
-           sodipodi:role="line"
-           id="tspan5199">initializer</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
-         x="865.05524"
-         y="56.166183"
-         id="text5201"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           x="865.05524"
-           y="56.166183"
-           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
-           id="tspan5209">call all nested</tspan><tspan
-           sodipodi:role="line"
-           x="865.05524"
-           y="73.666183"
-           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
-           id="tspan5213">class accessors</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
-         x="460.09528"
-         y="55.528709"
-         id="text5215"
-         sodipodi:linespacing="125%"><tspan
-           id="tspan5217"
-           sodipodi:role="line"
-           x="460.09528"
-           y="55.528709"
-           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">install <tspan
-   id="tspan5219"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#666666;font-family:Courier;-inkscape-font-specification:Courier">outer</tspan></tspan><tspan
-           id="tspan5221"
-           sodipodi:role="line"
-           x="460.09528"
-           y="74.303665"
-           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">method</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text5223"
-         y="56.166183"
-         x="350.13223"
-         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
-         xml:space="preserve"><tspan
-           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
-           y="56.166183"
-           x="350.13223"
-           sodipodi:role="line"
-           id="tspan5225">install</tspan><tspan
-           id="tspan5227"
-           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
-           y="73.666183"
-           x="350.13223"
-           sodipodi:role="line">methods</tspan></text>
-      <rect
-         style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect5229"
-         width="80"
-         height="35"
-         x="310"
-         y="-27.637817" />
-      <rect
-         style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect5231"
-         width="100"
-         height="35"
-         x="410"
-         y="-27.637817" />
-      <rect
-         style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect5233"
-         width="80"
-         height="35"
-         x="550"
-         y="-27.637817" />
-      <rect
-         style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect5235"
-         width="80"
-         height="35"
-         x="650"
-         y="-27.597816" />
-      <rect
-         style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect5237"
-         width="70"
-         height="35"
-         x="750"
-         y="-27.637817" />
-      <rect
-         style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect5239"
-         width="80"
-         height="35"
-         x="840"
-         y="-27.637817" />
-      <rect
-         style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect5241"
-         width="110"
-         height="35"
-         x="810"
-         y="42.362183" />
-      <rect
-         style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect5243"
-         width="100"
-         height="35"
-         x="410"
-         y="42.362183" />
-      <rect
-         style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
-         id="rect5245"
-         width="80"
-         height="35"
-         x="310"
-         y="42.362183" />
-      <path
-         style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1MendV)"
-         d="m 395,-7.637817 10,0"
-         id="path5247"
-         inkscape:connector-curvature="0" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path5991"
-         d="m 515,-7.637817 30,0"
-         style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend9)" />
-      <path
-         style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1MendT)"
-         d="m 634.99999,-7.637817 10,0"
-         id="path5993"
-         inkscape:connector-curvature="0" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path5995"
-         d="m 735,-7.637817 10,0"
-         style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend6)" />
-      <path
-         style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1MendS)"
-         d="m 825,-7.637817 10,0"
-         id="path5997"
-         inkscape:connector-curvature="0" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path5999"
-         d="m 880,12.362182 0,25"
-         style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mendx)"
-         sodipodi:nodetypes="cc" />
-      <path
-         style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mendo)"
-         d="m 805,62.362183 -290,0"
-         id="path6001"
-         inkscape:connector-curvature="0" />
-      <path
-         style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mendv)"
-         d="m 405,62.362183 -10,0"
-         id="path6189"
-         inkscape:connector-curvature="0" />
-    </g>
-    <path
-       style="fill:#666666;stroke:#666666;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0"
-       d="M 470,122.36218 290,92.362183"
-       id="path6675"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:#666666;stroke:#666666;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0"
-       d="M 590,122.36218 940,92.362183"
-       id="path6677"
-       inkscape:connector-curvature="0" />
-    <rect
-       style="fill:none;stroke:#666666;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:3.00000001, 3.00000001;stroke-dashoffset:0"
-       id="rect6679"
-       width="640"
-       height="150"
-       x="295"
-       y="-67.637817" />
+         y="-21.844818"
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">assert not</tspan><tspan
+         sodipodi:role="line"
+         x="350.01553"
+         y="-4.3448181"
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+         id="tspan5132">initialized</tspan></text>
     <text
        sodipodi:linespacing="125%"
-       id="text6731"
-       y="-47.637817"
+       id="text5134"
+       y="-21.971294"
+       x="460.09528"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+         y="-21.971294"
+         x="460.09528"
+         sodipodi:role="line"
+         id="tspan5142">install <tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#666666;font-family:Courier;-inkscape-font-specification:Courier"
+   id="tspan5144">outer</tspan></tspan><tspan
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+         y="-3.1963413"
+         x="460.09528"
+         sodipodi:role="line"
+         id="tspan5189">method</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
+       x="785.13226"
+       y="-21.333817"
+       id="text5175"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan5179"
+         sodipodi:role="line"
+         x="785.13226"
+         y="-21.333817"
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">install</tspan><tspan
+         sodipodi:role="line"
+         x="785.13226"
+         y="-3.8338165"
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+         id="tspan5183">methods</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text5191"
+       y="48.666183"
+       x="719.9325"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         id="tspan5195"
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+         y="48.666183"
+         x="719.9325"
+         sodipodi:role="line">run class</tspan><tspan
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+         y="66.166183"
+         x="719.9325"
+         sodipodi:role="line"
+         id="tspan5199">initializer</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
+       x="460.09528"
+       y="48.028709"
+       id="text5215"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan5217"
+         sodipodi:role="line"
+         x="460.09528"
+         y="48.028709"
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">install <tspan
+   id="tspan5219"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#666666;font-family:Courier;-inkscape-font-specification:Courier">outer</tspan></tspan><tspan
+         id="tspan5221"
+         sodipodi:role="line"
+         x="460.09528"
+         y="66.803665"
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">method</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text5223"
+       y="48.666183"
+       x="350.13223"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+         y="48.666183"
+         x="350.13223"
+         sodipodi:role="line"
+         id="tspan5225">install</tspan><tspan
+         id="tspan5227"
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+         y="66.166183"
+         x="350.13223"
+         sodipodi:role="line">methods</tspan></text>
+    <rect
+       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5229"
+       width="80"
+       height="35"
+       x="310"
+       y="-35.137817" />
+    <rect
+       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5231"
+       width="100"
+       height="35"
+       x="410"
+       y="-35.137817" />
+    <g
+       id="g3191">
+      <text
+         sodipodi:linespacing="125%"
+         id="text5148"
+         y="-21.844818"
+         x="590.00702"
+         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           id="tspan5159"
+           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+           y="-21.844818"
+           x="590.00702"
+           sodipodi:role="line">generate</tspan><tspan
+           id="tspan5163"
+           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+           y="-4.3448181"
+           x="590.00702"
+           sodipodi:role="line">class name</tspan></text>
+      <rect
+         y="-35.137817"
+         x="550"
+         height="35"
+         width="80"
+         id="rect5233"
+         style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+    </g>
+    <g
+       id="g3197">
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
+         x="689.98053"
+         y="-22.609818"
+         id="text5165"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           x="689.98053"
+           y="-22.609818"
+           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+           id="tspan5169">mark as</tspan><tspan
+           id="tspan5173"
+           sodipodi:role="line"
+           x="689.98053"
+           y="-5.1098175"
+           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">generated</tspan></text>
+      <rect
+         y="-35.097816"
+         x="650"
+         height="35"
+         width="80"
+         id="rect5235"
+         style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+    </g>
+    <rect
+       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5237"
+       width="70"
+       height="35"
+       x="750"
+       y="-35.137817" />
+    <rect
+       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5239"
+       width="80"
+       height="35"
+       x="680"
+       y="34.862183" />
+    <g
+       id="g3185">
+      <text
+         sodipodi:linespacing="125%"
+         id="text5201"
+         y="48.666183"
+         x="605.05524"
+         style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           id="tspan5209"
+           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+           y="48.666183"
+           x="605.05524"
+           sodipodi:role="line">call all nested</tspan><tspan
+           id="tspan5213"
+           style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
+           y="66.166183"
+           x="605.05524"
+           sodipodi:role="line">class accessors</tspan></text>
+      <rect
+         y="34.862183"
+         x="550"
+         height="35"
+         width="110"
+         id="rect5241"
+         style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+    </g>
+    <rect
+       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5243"
+       width="100"
+       height="35"
+       x="410"
+       y="34.862183" />
+    <rect
+       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5245"
+       width="80"
+       height="35"
+       x="310"
+       y="34.862183" />
+    <path
+       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1MendV)"
+       d="m 395,-15.137817 10,0"
+       id="path5247"
+       inkscape:connector-curvature="0" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path5991"
+       d="m 455,7.362183 -110,20"
+       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend9)" />
+    <path
+       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1MendT)"
+       d="m 634.99999,-17.637817 10,0"
+       id="path5993"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path5995"
+       d="m 735,-17.597816 10,0"
+       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend6)" />
+    <path
+       sodipodi:nodetypes="cc"
+       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mendo)"
+       d="m 514.625,54.862183 30.375,-72.5"
+       id="path6001"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mendv)"
+       d="m 394.625,54.862183 10,0"
+       id="path6189"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path6675"
+       d="M 470,122.36218 290,92.362183"
+       style="fill:#666666;stroke:#666666;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path6677"
+       d="M 590,122.36218 890,92.362183"
+       style="fill:#666666;stroke:#666666;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0"
+       sodipodi:nodetypes="cc" />
+    <rect
+       y="-67.637817"
+       x="295"
+       height="150"
+       width="590"
+       id="rect6679"
+       style="fill:none;stroke:#666666;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:3.00000001, 3.00000001;stroke-dashoffset:0" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        x="345"
+       y="-47.637817"
+       id="text6731"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan6735"
+         sodipodi:role="line"
+         x="345"
+         y="-47.637817"
+         style="font-size:14px;font-weight:bold;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola Bold">inst side</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text6741"
+       y="-47.637817"
+       x="590"
        style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:14px;font-weight:bold;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola Bold"
          y="-47.637817"
-         x="345"
+         x="590"
          sodipodi:role="line"
-         id="tspan6735">inst side</tspan></text>
+         id="tspan6743">class side</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="590"
-       y="-47.637817"
-       id="text6741"
+       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="275"
+       y="157.36218"
+       id="text6783"
        sodipodi:linespacing="125%"><tspan
-         id="tspan6743"
+         id="tspan6787"
          sodipodi:role="line"
-         x="590"
-         y="-47.637817"
-         style="font-size:14px;font-weight:bold;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola Bold">class side</tspan></text>
+         x="275"
+         y="157.36218"
+         style="font-size:14px;text-align:center;text-anchor:middle;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">no</tspan></text>
     <text
        sodipodi:linespacing="125%"
-       id="text6783"
-       y="157.36218"
-       x="275"
+       id="text6791"
+       y="207.36218"
+       x="170"
        style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:14px;text-align:center;text-anchor:middle;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola"
-         y="157.36218"
-         x="275"
+         y="207.36218"
+         x="170"
          sodipodi:role="line"
-         id="tspan6787">no</tspan></text>
+         id="tspan6793">yes</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path3183"
+       d="m 675.375,52.362183 -10,0"
+       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1MendT)" />
     <text
        xml:space="preserve"
-       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="170"
-       y="207.36218"
-       id="text6791"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
+       x="824.7713"
+       y="47.357182"
+       id="text3203"
        sodipodi:linespacing="125%"><tspan
-         id="tspan6793"
+         id="tspan3207"
          sodipodi:role="line"
-         x="170"
-         y="207.36218"
-         style="font-size:14px;text-align:center;text-anchor:middle;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">yes</tspan></text>
+         x="824.7713"
+         y="47.357182"
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">install</tspan><tspan
+         id="tspan3213"
+         sodipodi:role="line"
+         x="824.7713"
+         y="64.857178"
+         style="font-size:14px;text-align:center;text-anchor:middle;fill:#666666;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">specification</tspan></text>
+    <rect
+       y="34.862183"
+       x="780"
+       height="35"
+       width="90"
+       id="rect3209"
+       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0" />
+    <path
+       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend6)"
+       d="m 775.375,52.362183 -10,0"
+       id="path3215"
+       inkscape:connector-curvature="0" />
+    <path
+       transform="translate(59.5,-68.137817)"
+       inkscape:connector-curvature="0"
+       id="path3217"
+       d="m 765.5,50.5 25,0 0,45"
+       style="fill:none;stroke:#666666;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1MendX)" />
   </g>
 </svg>
