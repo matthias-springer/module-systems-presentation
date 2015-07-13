@@ -208,19 +208,19 @@
 \section{Concept}
 \begin{frame}{Recap: Newspeak Nested Classes}
   \begin{itemize}
-    \item Class = methods + nested classes + slots (instance variables).
-    \item Late Binding: all references to class names are self sends.
-    \item External Configuration: \texttt{platform} object contains external dependencies.
-    \item Lookup: lexical scope, then inheritance chain.
+    \item Class = methods + nested classes + slots (instance variables)
+    \item Late Binding: all references to class names are self sends
+    \item External Configuration: \texttt{platform} object contains external dependencies
+    \item Lookup: lexical scope, then inheritance chain
   \end{itemize}
 \end{frame}
 
 \begin{frame}{Goals}
   \begin{itemize}
-    \item Better \textbf{understandability} and \textbf{readability} through hierarchical decomposition.
-    \item More and fine-grained \textbf{code reuse} through mixin modularity (modules).
-    \item Avoiding \textbf{class name clashes} with classes as namespaces.
-    \item Later (?): avoiding \textbf{extension method clashes} with COP layers.
+    \item Better \textbf{understandability} and \textbf{readability} through hierarchical decomposition
+    \item More and fine-grained \textbf{code reuse} through mixin modularity (modules)
+    \item Avoiding \textbf{class name clashes} with classes as namespaces
+    \item Later (?): avoiding \textbf{extension method clashes} with COP layers
   \end{itemize}
 \end{frame}
 
@@ -256,10 +256,17 @@ A C G method.
   \textbf{Demo}
 \end{frame}
 
+\begin{explainframe}{\texttt{Sokoban}}
+  \begin{itemize}
+    \item All class references are relative: relocatable code
+    \item Class nesting establishes namespace: no class name clashes
+  \end{itemize}
+\end{explainframe}
+
 \begin{explainframe}{\texttt{MathLibrary}}
   \begin{itemize}
-    \item Versions are nested classes on class-side.
-    \item Version containers are \emph{uninstantiable} (pure namespaces).
+    \item Versions are nested classes on class-side
+    \item Version containers are \emph{uninstantiable} (pure namespaces)
   \end{itemize}
 
   \begin{lstlisting}
@@ -277,8 +284,8 @@ point := MathLibrary v1 latest Geometry Shapes Point x: 13 y: 37.
 
 \begin{explainframe}{\texttt{ActiveRecordExample}}
   \begin{itemize}
-    \item \texttt{Accessors}, \texttt{Printing}, \texttt{Validation} are reusable modules.
-    \item Mixin includes are flattened to single inheritance.
+    \item \texttt{Accessors}, \texttt{Printing}, \texttt{Validation} are reusable modules
+    \item Mixin includes are flattened to single inheritance
   \end{itemize}
 
 \begin{table}
@@ -289,8 +296,8 @@ point := MathLibrary v1 latest Geometry Shapes Point x: 13 y: 37.
 
 \begin{explainframe}{\texttt{CollectionExample}}
   \begin{itemize}
-    \item Everything with a \texttt{do:} method can have the collection API.
-    \item \texttt{ScuGameTile} is a subclass of \texttt{Morph} and has the \texttt{CollectionMixin} included (alternative: multiple inheritance).
+    \item Everything with a \texttt{do:} method can have the collection API
+    \item \texttt{ScuGameTile} is a subclass of \texttt{Morph} and has the \texttt{CollectionMixin} included (alternative: multiple inheritance)
   \end{itemize}
 
 \begin{table}
@@ -301,14 +308,14 @@ point := MathLibrary v1 latest Geometry Shapes Point x: 13 y: 37.
 
 \begin{explainframe}{\texttt{IteratorExample}}
   \begin{itemize}
-    \item \texttt{Iterator} is an adapter.
-    \item \texttt{Iterator} is an inst-side nested class and bound to (belongs to) an instance of \texttt{HashSet}.
-    \item Can be used as a form of interface encapsulation: developer can pass an instance of \texttt{Iterator} around instead of \texttt{HashSet}, making sure that nobody accesses private API (unless \texttt{Iterator>>outer} is called).
+    \item \texttt{Iterator} is an adapter
+    \item \texttt{Iterator} is an inst-side nested class and bound to (belongs to) an instance of \texttt{HashSet}
+    \item Can be used as a form of interface encapsulation: developer can pass an instance of \texttt{Iterator} around instead of \texttt{HashSet}, making sure that nobody accesses private API (unless \texttt{Iterator>>outer} is called)
   \end{itemize}
 
 \begin{table}
   \centering
-  \includegraphics[width=0.8\textwidth]{screenshot_iterator.png}
+  \includegraphics[width=0.7\textwidth]{screenshot_iterator.png}
 \end{table}
 \end{explainframe}
 
@@ -322,10 +329,10 @@ point := MathLibrary v1 latest Geometry Shapes Point x: 13 y: 37.
 \end{minipage}% This must go next to `\end{minipage}`
 \begin{minipage}{.6\textwidth}
 \begin{itemize}
-  \item Class = new directory + corresponding method file.
-  \item Method = source code file.
-  \item \texttt{classname/class} for class-side, \texttt{classname/instance} for inst-side.
-  \item System provides \emph{load} and \emph{save} functionality, but no merge (should be done via underlying version control system).
+  \item Class = new directory + corresponding method file
+  \item Method = source code file
+  \item \texttt{classname/class} for class-side, \texttt{classname/instance} for inst-side
+  \item System provides \emph{load} and \emph{save} functionality, but no merge (should be done via underlying version control system)
 \end{itemize}
 \end{minipage}
 \end{explainframe}
@@ -339,9 +346,9 @@ point := MathLibrary v1 latest Geometry Shapes Point x: 13 y: 37.
 
 \begin{explainframe}{Lazy Class Generation}
 \begin{itemize}
-  \item Class accessor generates and caches nested class.
-  \item Cache is a \texttt{WeakIdentityKeyDictionary} (instance variable of corresponding \texttt{MethodSpecification}).
-  \item All \emph{entirely} class-side nested classes are initialized upon module instantiation (except for class-side nested classes that have an inst-side ancestor).
+  \item Class accessor generates and caches nested class
+  \item Cache is a \texttt{WeakIdentityKeyDictionary} (instance variable of corresponding \texttt{MethodSpecification})
+  \item All \emph{entirely} class-side nested classes are initialized upon module instantiation (except for class-side nested classes that have an inst-side ancestor)
 \end{itemize}
 \end{explainframe}
 
@@ -376,8 +383,8 @@ B2 new outer.
 \end{lstlisting}
 
 \begin{itemize}
-  \item \texttt{outer} keyword is bound as \texttt{CompiledMethod} literal.
-  \item Early binding is useful for class binding, to avoid accidential name capturing.
+  \item \texttt{outer} keyword is bound as \texttt{CompiledMethod} literal
+  \item Early binding is useful for class binding, to avoid accidential name capturing
 \end{itemize}
 \end{explainframe}
 
@@ -576,21 +583,21 @@ ColorRectangle>> == anObject
 
 \begin{frame}{Integration in Squeak}
 \begin{itemize}
-  \item Compatible to Squeak-Trunk.
-  \item New Vivide-based system browser (old browser is incompatible).
-  \item Custom import/export format wit Git support (Monticello is incompatible).
-  \item Testrunner can be used as normal.
-  \item Debugger works, but shows transformed source code.
+  \item Compatible to Squeak-Trunk
+  \item New Vivide-based system browser (old browser is incompatible)
+  \item Custom import/export format wit Git support (Monticello is incompatible)
+  \item Testrunner can be used as normal
+  \item Debugger works, but shows transformed source code
 \end{itemize}
 \end{frame}
 
 \section{Next Steps}
 \begin{frame}{Next Steps}
   \begin{itemize}
-    \item Class migration and live system editing.
-    \item COP layer for extension methods.
-    \item Solve performance issues during model instantiation.
-    \item UI polishing and tool adaptation (debugger, sender/implementors/... etc.).
+    \item Class migration and live system editing
+    \item COP layer for extension methods
+    \item Solve performance issues during model instantiation
+    \item UI polishing and tool adaptation (debugger, sender/implementors/... etc.)
   \end{itemize}
 \end{frame}
 
