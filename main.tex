@@ -347,7 +347,7 @@ point := MathLibrary v1 latest Geometry Shapes Point x: 13 y: 37.
 \begin{explainframe}{Lazy Class Generation}
 \begin{itemize}
   \item Class accessor generates and caches nested class
-  \item Cache is a \texttt{WeakIdentityKeyDictionary} (instance variable of corresponding \texttt{MethodSpecification})
+  \item Cache is a \texttt{WeakIdentityKeyDictionary} \\ (instance variable of corresponding \texttt{MethodSpecification})
   \item All \emph{entirely} class-side nested classes are initialized upon module instantiation (except for class-side nested classes that have an inst-side ancestor)
 \end{itemize}
 \end{explainframe}
@@ -361,7 +361,7 @@ point := MathLibrary v1 latest Geometry Shapes Point x: 13 y: 37.
 \begin{frame}{Accessing Enclosing Object}
   \begin{itemize}
     \item \texttt{outer} keyword: reference to enclosing object according to \textbf{lexical scope of method} (early bound)
-    \item \texttt{outer} method: returns enclosing object of receiver's class (late bound)
+    \item \texttt{outer} method: returns enclosing object of receiver's class \\ (late bound)
   \end{itemize}
 
   \begin{table}
@@ -415,7 +415,7 @@ B2 new outer.
 \begin{explainframe}{Class Lookup}
 \begin{itemize}
   \item Smalltalk style: globals are early bound, message sends are late bound
-  \item Newspeak style: no globals, everything is late bound (with implicit receiver)
+  \item Newspeak style: no globals, everything is late bound \\ (with implicit receiver)
   \item Use Cases:
   \begin{itemize}
     \item Early bound to outer object: avoid accidential class shadowing
@@ -519,7 +519,7 @@ Collection
 
 \begin{frame}[fragile]{Mixin-based Traits}
 \begin{itemize}
-  \item Post-include hook: replace duplicate methods with exception-raising methods
+  \item Post-include hook: \\ replace duplicate methods with exception-raising methods
   \item Resolve conflicts manually in generated class
 \end{itemize}
 \begin{lstlisting}
@@ -585,7 +585,7 @@ ColorRectangle>> == anObject
 \begin{itemize}
   \item Compatible to Squeak-Trunk
   \item New Vivide-based system browser (old browser is incompatible)
-  \item Custom import/export format wit Git support (Monticello is incompatible)
+  \item Custom import/export format wit Git support \\ (Monticello is incompatible)
   \item Testrunner can be used as normal
   \item Debugger works, but shows transformed source code
 \end{itemize}
@@ -597,7 +597,7 @@ ColorRectangle>> == anObject
     \item Class migration and live system editing
     \item COP layer for extension methods
     \item Solve performance issues during model instantiation
-    \item UI polishing and tool adaptation (debugger, sender/implementors/... etc.)
+    \item UI polishing and tool adaptation \\ (debugger, sender/implementors/... etc.)
   \end{itemize}
 \end{frame}
 
